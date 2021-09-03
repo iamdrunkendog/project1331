@@ -10,31 +10,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+    <!-- Fontawesome -->
+    <link href="./css/all.min.css" rel="stylesheet">
+
     <style>
         html,
         body {
             height: 100%;
+            width: 100%;
             margin: 0px;
             padding: 0px;
         }
 
         .wrapper {
             height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
         }
 
         .logo-img {
             max-width: 90%;
         }
+
+        .row {
+            margin: 4em 0px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container wrapper bg-primary">
-        <div class="d-flex justify-content-center align-item-center">
-            <div>
-                <img src="./assets/logo.png" alt="logo" class="w-100">
+    <div class="wrapper">
+        <div class="d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="w-100">
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="./assets/logo.png" alt="logo" class="logo-img">
+                    </div>
+                </div>
+
+
+                <div class="row bg-black text-white p-5">
+                    <div class="col p-5 text-center">
+                        <h1>We blah blah</h1>
+                        <button class="btn btn-light btn-large m-1">Contact us</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-secondary text-center">
+                        <p>Copyrights © 2021 Project1331<br>all rights reserved.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+
 
     </div>
     <!-- Bootstrap JS CDN -->
