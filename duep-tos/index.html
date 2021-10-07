@@ -1,1489 +1,636 @@
-<html>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>(주)프로젝트일삼삼일 서비스 이용약관</title>
-	<style>
-		/* cspell:disable-file */
-		/* webkit printing magic: print all background colors */
-		html {
-			-webkit-print-color-adjust: exact;
-		}
-
-		* {
-			box-sizing: border-box;
-			-webkit-print-color-adjust: exact;
-		}
-
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		@media only screen {
-			body {
-				margin: 2em auto;
-				max-width: 900px;
-				color: rgb(55, 53, 47);
-			}
-		}
-
-		body {
-			line-height: 1.5;
-			white-space: pre-wrap;
-		}
-
-		a,
-		a.visited {
-			color: inherit;
-			text-decoration: underline;
-		}
-
-		.pdf-relative-link-path {
-			font-size: 80%;
-			color: #444;
-		}
-
-		h1,
-		h2,
-		h3 {
-			letter-spacing: -0.01em;
-			line-height: 1.2;
-			font-weight: 600;
-			margin-bottom: 0;
-		}
-
-		.page-title {
-			font-size: 2.5rem;
-			font-weight: 700;
-			margin-top: 0;
-			margin-bottom: 0.75em;
-		}
-
-		h1 {
-			font-size: 1.875rem;
-			margin-top: 1.875rem;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-			margin-top: 1.5rem;
-		}
-
-		h3 {
-			font-size: 1.25rem;
-			margin-top: 1.25rem;
-		}
-
-		.source {
-			border: 1px solid #ddd;
-			border-radius: 3px;
-			padding: 1.5em;
-			word-break: break-all;
-		}
-
-		.callout {
-			border-radius: 3px;
-			padding: 1rem;
-		}
-
-		figure {
-			margin: 1.25em 0;
-			page-break-inside: avoid;
-		}
-
-		figcaption {
-			opacity: 0.5;
-			font-size: 85%;
-			margin-top: 0.5em;
-		}
-
-		mark {
-			background-color: transparent;
-		}
-
-		.indented {
-			padding-left: 1.5em;
-		}
-
-		hr {
-			background: transparent;
-			display: block;
-			width: 100%;
-			height: 1px;
-			visibility: visible;
-			border: none;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-		}
-
-		img {
-			max-width: 100%;
-		}
-
-		@media only print {
-			img {
-				max-height: 100vh;
-				object-fit: contain;
-			}
-		}
-
-		@page {
-			margin: 1in;
-		}
-
-		.collection-content {
-			font-size: 0.875rem;
-		}
-
-		.column-list {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.column {
-			padding: 0 1em;
-		}
-
-		.column:first-child {
-			padding-left: 0;
-		}
-
-		.column:last-child {
-			padding-right: 0;
-		}
-
-		.table_of_contents-item {
-			display: block;
-			font-size: 0.875rem;
-			line-height: 1.3;
-			padding: 0.125rem;
-		}
-
-		.table_of_contents-indent-1 {
-			margin-left: 1.5rem;
-		}
-
-		.table_of_contents-indent-2 {
-			margin-left: 3rem;
-		}
-
-		.table_of_contents-indent-3 {
-			margin-left: 4.5rem;
-		}
-
-		.table_of_contents-link {
-			text-decoration: none;
-			opacity: 0.7;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-		}
-
-		table,
-		th,
-		td {
-			border: 1px solid rgba(55, 53, 47, 0.09);
-			border-collapse: collapse;
-		}
-
-		table {
-			border-left: none;
-			border-right: none;
-		}
-
-		th,
-		td {
-			font-weight: normal;
-			padding: 0.25em 0.5em;
-			line-height: 1.5;
-			min-height: 1.5em;
-			text-align: left;
-		}
-
-		th {
-			color: rgba(55, 53, 47, 0.6);
-		}
-
-		ol,
-		ul {
-			margin: 0;
-			margin-block-start: 0.6em;
-			margin-block-end: 0.6em;
-		}
-
-		li>ol:first-child,
-		li>ul:first-child {
-			margin-block-start: 0.6em;
-		}
-
-		ul>li {
-			list-style: disc;
-		}
-
-		ul.to-do-list {
-			text-indent: -1.7em;
-		}
-
-		ul.to-do-list>li {
-			list-style: none;
-		}
-
-		.to-do-children-checked {
-			text-decoration: line-through;
-			opacity: 0.375;
-		}
-
-		ul.toggle>li {
-			list-style: none;
-		}
-
-		ul {
-			padding-inline-start: 1.7em;
-		}
-
-		ul>li {
-			padding-left: 0.1em;
-		}
-
-		ol {
-			padding-inline-start: 1.6em;
-		}
-
-		ol>li {
-			padding-left: 0.2em;
-		}
-
-		.mono ol {
-			padding-inline-start: 2em;
-		}
-
-		.mono ol>li {
-			text-indent: -0.4em;
-		}
-
-		.toggle {
-			padding-inline-start: 0em;
-			list-style-type: none;
-		}
-
-		/* Indent toggle children */
-		.toggle>li>details {
-			padding-left: 1.7em;
-		}
-
-		.toggle>li>details>summary {
-			margin-left: -1.1em;
-		}
-
-		.selected-value {
-			display: inline-block;
-			padding: 0 0.5em;
-			background: rgba(206, 205, 202, 0.5);
-			border-radius: 3px;
-			margin-right: 0.5em;
-			margin-top: 0.3em;
-			margin-bottom: 0.3em;
-			white-space: nowrap;
-		}
-
-		.collection-title {
-			display: inline-block;
-			margin-right: 1em;
-		}
-
-		time {
-			opacity: 0.5;
-		}
-
-		.icon {
-			display: inline-block;
-			max-width: 1.2em;
-			max-height: 1.2em;
-			text-decoration: none;
-			vertical-align: text-bottom;
-			margin-right: 0.5em;
-		}
-
-		img.icon {
-			border-radius: 3px;
-		}
-
-		.user-icon {
-			width: 1.5em;
-			height: 1.5em;
-			border-radius: 100%;
-			margin-right: 0.5rem;
-		}
-
-		.user-icon-inner {
-			font-size: 0.8em;
-		}
-
-		.text-icon {
-			border: 1px solid #000;
-			text-align: center;
-		}
-
-		.page-cover-image {
-			display: block;
-			object-fit: cover;
-			width: 100%;
-			height: 30vh;
-		}
-
-		.page-header-icon {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-
-		.page-header-icon-with-cover {
-			margin-top: -0.72em;
-			margin-left: 0.07em;
-		}
-
-		.page-header-icon img {
-			border-radius: 3px;
-		}
-
-		.link-to-page {
-			margin: 1em 0;
-			padding: 0;
-			border: none;
-			font-weight: 500;
-		}
-
-		p>.user {
-			opacity: 0.5;
-		}
-
-		td>.user,
-		td>time {
-			white-space: nowrap;
-		}
-
-		input[type="checkbox"] {
-			transform: scale(1.5);
-			margin-right: 0.6em;
-			vertical-align: middle;
-		}
-
-		p {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-
-		.image {
-			border: none;
-			margin: 1.5em 0;
-			padding: 0;
-			border-radius: 0;
-			text-align: center;
-		}
-
-		.code,
-		code {
-			background: rgba(135, 131, 120, 0.15);
-			border-radius: 3px;
-			padding: 0.2em 0.4em;
-			border-radius: 3px;
-			font-size: 85%;
-			tab-size: 2;
-		}
-
-		code {
-			color: #eb5757;
-		}
-
-		.code {
-			padding: 1.5em 1em;
-		}
-
-		.code-wrap {
-			white-space: pre-wrap;
-			word-break: break-all;
-		}
-
-		.code>code {
-			background: none;
-			padding: 0;
-			font-size: 100%;
-			color: inherit;
-		}
-
-		blockquote {
-			font-size: 1.25em;
-			margin: 1em 0;
-			padding-left: 1em;
-			border-left: 3px solid rgb(55, 53, 47);
-		}
-
-		.bookmark {
-			text-decoration: none;
-			max-height: 8em;
-			padding: 0;
-			display: flex;
-			width: 100%;
-			align-items: stretch;
-		}
-
-		.bookmark-title {
-			font-size: 0.85em;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			height: 1.75em;
-			white-space: nowrap;
-		}
-
-		.bookmark-text {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.bookmark-info {
-			flex: 4 1 180px;
-			padding: 12px 14px 14px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-
-		.bookmark-image {
-			width: 33%;
-			flex: 1 1 180px;
-			display: block;
-			position: relative;
-			object-fit: cover;
-			border-radius: 1px;
-		}
-
-		.bookmark-description {
-			color: rgba(55, 53, 47, 0.6);
-			font-size: 0.75em;
-			overflow: hidden;
-			max-height: 4.5em;
-			word-break: break-word;
-		}
-
-		.bookmark-href {
-			font-size: 0.75em;
-			margin-top: 0.25em;
-		}
-
-		.sans {
-			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-		}
-
-		.code {
-			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
-		}
-
-		.serif {
-			font-family: Lyon-Text, Georgia, ui-serif, serif;
-		}
-
-		.mono {
-			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
-		}
-
-		.pdf .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
-		}
-
-		.pdf .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.pdf .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
-		}
-
-		.pdf .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.highlight-default {}
-
-		.highlight-gray {
-			color: rgb(155, 154, 151);
-		}
-
-		.highlight-brown {
-			color: rgb(100, 71, 58);
-		}
-
-		.highlight-orange {
-			color: rgb(217, 115, 13);
-		}
-
-		.highlight-yellow {
-			color: rgb(223, 171, 1);
-		}
-
-		.highlight-teal {
-			color: rgb(15, 123, 108);
-		}
-
-		.highlight-blue {
-			color: rgb(11, 110, 153);
-		}
-
-		.highlight-purple {
-			color: rgb(105, 64, 165);
-		}
-
-		.highlight-pink {
-			color: rgb(173, 26, 114);
-		}
-
-		.highlight-red {
-			color: rgb(224, 62, 62);
-		}
-
-		.highlight-gray_background {
-			background: rgb(235, 236, 237);
-		}
-
-		.highlight-brown_background {
-			background: rgb(233, 229, 227);
-		}
-
-		.highlight-orange_background {
-			background: rgb(250, 235, 221);
-		}
-
-		.highlight-yellow_background {
-			background: rgb(251, 243, 219);
-		}
-
-		.highlight-teal_background {
-			background: rgb(221, 237, 234);
-		}
-
-		.highlight-blue_background {
-			background: rgb(221, 235, 241);
-		}
-
-		.highlight-purple_background {
-			background: rgb(234, 228, 242);
-		}
-
-		.highlight-pink_background {
-			background: rgb(244, 223, 235);
-		}
-
-		.highlight-red_background {
-			background: rgb(251, 228, 228);
-		}
-
-		.block-color-default {
-			color: inherit;
-			fill: inherit;
-		}
-
-		.block-color-gray {
-			color: rgba(55, 53, 47, 0.6);
-			fill: rgba(55, 53, 47, 0.6);
-		}
-
-		.block-color-brown {
-			color: rgb(100, 71, 58);
-			fill: rgb(100, 71, 58);
-		}
-
-		.block-color-orange {
-			color: rgb(217, 115, 13);
-			fill: rgb(217, 115, 13);
-		}
-
-		.block-color-yellow {
-			color: rgb(223, 171, 1);
-			fill: rgb(223, 171, 1);
-		}
-
-		.block-color-teal {
-			color: rgb(15, 123, 108);
-			fill: rgb(15, 123, 108);
-		}
-
-		.block-color-blue {
-			color: rgb(11, 110, 153);
-			fill: rgb(11, 110, 153);
-		}
-
-		.block-color-purple {
-			color: rgb(105, 64, 165);
-			fill: rgb(105, 64, 165);
-		}
-
-		.block-color-pink {
-			color: rgb(173, 26, 114);
-			fill: rgb(173, 26, 114);
-		}
-
-		.block-color-red {
-			color: rgb(224, 62, 62);
-			fill: rgb(224, 62, 62);
-		}
-
-		.block-color-gray_background {
-			background: rgb(235, 236, 237);
-		}
-
-		.block-color-brown_background {
-			background: rgb(233, 229, 227);
-		}
-
-		.block-color-orange_background {
-			background: rgb(250, 235, 221);
-		}
-
-		.block-color-yellow_background {
-			background: rgb(251, 243, 219);
-		}
-
-		.block-color-teal_background {
-			background: rgb(221, 237, 234);
-		}
-
-		.block-color-blue_background {
-			background: rgb(221, 235, 241);
-		}
-
-		.block-color-purple_background {
-			background: rgb(234, 228, 242);
-		}
-
-		.block-color-pink_background {
-			background: rgb(244, 223, 235);
-		}
-
-		.block-color-red_background {
-			background: rgb(251, 228, 228);
-		}
-
-		.select-value-color-default {
-			background-color: rgba(206, 205, 202, 0.5);
-		}
-
-		.select-value-color-gray {
-			background-color: rgba(155, 154, 151, 0.4);
-		}
-
-		.select-value-color-brown {
-			background-color: rgba(140, 46, 0, 0.2);
-		}
-
-		.select-value-color-orange {
-			background-color: rgba(245, 93, 0, 0.2);
-		}
-
-		.select-value-color-yellow {
-			background-color: rgba(233, 168, 0, 0.2);
-		}
-
-		.select-value-color-green {
-			background-color: rgba(0, 135, 107, 0.2);
-		}
-
-		.select-value-color-blue {
-			background-color: rgba(0, 120, 223, 0.2);
-		}
-
-		.select-value-color-purple {
-			background-color: rgba(103, 36, 222, 0.2);
-		}
-
-		.select-value-color-pink {
-			background-color: rgba(221, 0, 129, 0.2);
-		}
-
-		.select-value-color-red {
-			background-color: rgba(255, 0, 26, 0.2);
-		}
-
-		.checkbox {
-			display: inline-flex;
-			vertical-align: text-bottom;
-			width: 16;
-			height: 16;
-			background-size: 16px;
-			margin-left: 2px;
-			margin-right: 5px;
-		}
-
-		.checkbox-on {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-
-		.checkbox-off {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-	</style>
-</head>
-
-<body>
-	<article id="1605a557-6dd8-4e07-855b-1aad444b62b3" class="page sans">
-		<header>
-			<h1 class="page-title">(주)프로젝트일삼삼일 서비스 이용약관</h1>
-		</header>
-		<div class="page-body">
-			<h3 id="7f2bba9d-e971-4f77-b699-b89dabe19dce" class="">제1조 목적</h3>
-			<p id="3d8cd209-bce7-4a55-94b7-d6e95c6b1c4e" class="">이 약관은 (주)프로젝트일삼삼일(이하 “회사”)가 제공하는 밥 먹었니 및 이와 관련된 제반
-				서비스(이하 “서비스”)의 이용과 관련하여 회사와 서비스 이용자(이하 “회원”)의 권리, 의무 및 책임 사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
-			<h3 id="5ad2915e-6019-4667-8aaa-3f605f5a2675" class="">제2조 용어의 정의</h3>
-			<ol type="1" id="410306c1-8108-4b41-94eb-52d5737c547e" class="numbered-list" start="1">
-				<li>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<ol type="a" id="0bbdeb9d-4665-429d-84a3-1b04affee650"
-						class="numbered-list" start="1">
-						<li>“회사”라 함은 설치 각종 단말기를 통하여 서비스를 제공하는 사업자를 의미합니다.</li>
-					</ol>
-					<ol type="a" id="642ebcb0-77a3-4854-a1e3-e422c9fd6947" class="numbered-list" start="2">
-						<li>“회원”이란 이 약관에 따라 이용계약을 체결하고, 회사가 제공하는 서비스를 이용하는 자를 의미합니다.</li>
-					</ol>
-					<ol type="a" id="33fd2865-84e2-4600-9f17-c26deea8836c" class="numbered-list" start="3">
-						<li>“단말기”란 콘텐츠를 다운로드 받거나 설치하여 사용할 수 있는 기기로서, PC, 휴대폰, 스마트폰, 휴대정보단말기(PDA), 태블릿 등을 의미합니다.</li>
-					</ol>
-					<ol type="a" id="61987db8-1000-4a47-b267-ed6dd292cc28" class="numbered-list" start="4">
-						<li>“계정정보”란 회원의 회원번호와 외부계정정보, 기기정보, 실명, 성별, 나이, 거주지, 프로필 사진 등 회원이 회사에 제공한 정보와 이용정보, 이용요금 결제 정보
-							등을 통칭합니다.</li>
-					</ol>
-					<ol type="a" id="94068d21-c534-4f96-9089-827a4039e152" class="numbered-list" start="5">
-						<li>“콘텐츠”란 단말기로 이용할 수 있도록 회사가 서비스 제공과 관련하여 디지털 방식으로 제작한 유료 또는 무료의 내용물 일체(네트워크 서비스, 애플리케이션, 유료
-							재화, 아이템 등)를 의미합니다.</li>
-					</ol>
-					<ol type="a" id="13104046-8154-4afb-8d90-ac0f9bc9658d" class="numbered-list" start="6">
-						<li>“오픈마켓”이란 단말기에서 콘텐츠를 설치하고 결제할 수 있도록 구축된 전자상거래 환경을 의미합니다.</li>
-					</ol>
-					<ol type="a" id="bce2a8df-cee7-449c-b3d0-3686e365eaf5" class="numbered-list" start="7">
-						<li>“애플리케이션”이란 회사가 제공하는 서비스를 이용하기 위하여 단말기를 통해 설치하여 사용하는 프로그램 일체를 의미합니다.</li>
-					</ol>
-					<ol type="a" id="cc5665ce-b883-49cd-ac88-106e84433d85" class="numbered-list" start="8">
-						<li>“서비스”라 함은 회사의 웹/모바일 상의 사이트, 애플리케이션, 기타 플랫폼을 통해 회원에게 제공되는 서비스, 고객지원, 정보제공 기타 이에 부수하는 일체의 서비스를
-							말합니다.</li>
-					</ol>
-					<ol type="a" id="9cb5c5a5-533b-4b50-9fae-32584cbf6dd2" class="numbered-list" start="9">
-						<li>“제휴서비스”라 함은 Facebook 등과 같은 소셜네트워크 서비스를 제공하는 자와의 제휴를 통하여 회원에게 서비스를 제공하는 것을 말합니다.</li>
-					</ol>
-					<ol type="a" id="77b6e781-d6be-4216-bc9d-1d774ad66d40" class="numbered-list" start="10">
-						<li>“이용자”란 회사와 이용계약을 체결하기 전 서비스를 이용하고자 하는 자를 의미합니다.</li>
-					</ol>
-					<ol type="a" id="a6033c2e-9905-4203-8444-64b1961c645f" class="numbered-list" start="11">
-						<li>“그룹”이라 함은 서로 간의 계정이 연동된 회원 조합을 의미합니다.</li>
-					</ol>
-					<ol type="a" id="2814e11d-4619-4d8a-a14c-b63459692554" class="numbered-list" start="12">
-						<li>“게시물”이라 함은 회원이 서비스를 이용함에 있어 서비스상에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을
-							의미합니다.</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="b189b12e-1df6-4684-b269-a6ddd9e12e5c" class="numbered-list" start="2">
-				<li>이 약관에서 사용하는 용어의 정의는 본 조 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스별 정책에서 정하는 바에 의하며, 이에 정하지 아니한 것은 일반적인 상 관례에
-					따릅니다.</li>
-			</ol>
-			<h3 id="981553b7-96b9-4969-8492-7757538b8637" class="">제3조 약관의 효력 및 변경</h3>
-			<ol type="1" id="dfe4b56d-e04f-428f-b0d9-fec3fdc30a21" class="numbered-list" start="1">
-				<li>“회사”는 “이용자”가 약관의 내용을 쉽게 알 수 있도록 작성하고 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회, 과오납금의 환급, 계약 해제 및 해지, 회사의
-					면책사항 및 회원에 대한 보상 등과 같은 중요한 내용을 회원이 쉽게 이해할 수 있도록 굵은 글씨 등으로 처리하여 표시합니다.</li>
-			</ol>
-			<ol type="1" id="1bc0fe8e-7748-4c3a-a5bc-ef29413669f2" class="numbered-list" start="2">
-				<li>회사가 약관을 개정할 경우에는 적용일자 및 개정내용, 개정사유 등을 명시하여 최소한 그 적용일 7일 이전부터 서비스 내 또는 그 연결화면 등에 게시하여 회원에게 공지합니다. 다만,
-					변경된 내용이 회원에게 불리하거나 중대한 사항의 변경인 경우에는 그 적용일 30일 이전까지 본문과 같은 방법으로 공지하고 제29조 제1항의 방법으로 회원에게 통지합니다. 이 경우
-					개정 전 내용과 개정 후 내용을 명확하게 비교하여 회원이 알기 쉽도록 표시합니다.</li>
-			</ol>
-			<ol type="1" id="35061279-3464-440d-8560-ad8b3d69e5f0" class="numbered-list" start="3">
-				<li>회사가 약관을 개정할 경우 개정약관 공지 후 개정약관의 적용에 대한 회원의 동의 여부를 확인합니다. 회사는 제2항의 공지 또는 통지를 할 경우 회원이 개정약관에 대해 동의 또는
-					거부의 의사표시를 하지 않으면 동의한 것으로 볼 수 있다는 내용도 함께 공지 또는 통지를 하며, 회원이 이 약관 시행일까지 거부의 의사표시를 하지 않는다면 개정약관에 동의한 것으로
-					볼 수 있습니다. 회원이 개정약관에 대해 동의하지 않는 경우 회사 또는 회원은 서비스 이용계약을 해지할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="2bc24f63-94ab-4cdd-acc3-acf69988ab24" class="numbered-list" start="4">
-				<li>회사는 회원이 회사와 이 약관의 내용에 관하여 질의 및 응답을 할 수 있도록 조치를 취합니다.</li>
-			</ol>
-			<ol type="1" id="d76f0a51-1369-489d-9bd1-bbee42d9d72a" class="numbered-list" start="5">
-				<li>회사는 「온라인 디지털콘텐츠산업 발전법」, 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「디지털콘텐츠이용자보호지침」, 「정보통신망이용촉진 및
-					정보보호 등에 관한 법률」, 「콘텐츠산업진흥법」 등 관련 법령에 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li>
-			</ol>
-			<h3 id="c799244f-389c-4c54-966a-91b47dcb01f5" class="">제4조 이용계약의 체결 및 적용</h3>
-			<ol type="1" id="296471dd-88d1-452e-aaed-b33c6d8fa4c4" class="numbered-list" start="1">
-				<li>이용계약은 “이용자”가 이 약관의 내용에 대하여 동의를 한 다음 서비스 이용 신청을 하고, 회사가 그 신청에 대해서 승낙함으로써 체결됩니다.</li>
-			</ol>
-			<ol type="1" id="66602701-7d12-4e80-9a15-02baeea74b9d" class="numbered-list" start="2">
-				<li>회사는 이용자의 신청에 대하여 승낙함을 원칙으로 합니다. 다만, 회사는 다음 각 호의 어느 하나에 해당하는 이용 신청에 대해서는 승낙을 거절할 수 있습니다.<ol type="a"
-						id="4d3ceb52-e0cd-47dd-b639-2d6dcefb94f2" class="numbered-list" start="1">
-						<li>이용신청서 내용을 허위로 기재하거나 이용신청 요건을 충족하지 못한 경우</li>
-					</ol>
-					<ol type="a" id="b0d03fcc-20f8-47e1-a563-6cfe7e60940f" class="numbered-list" start="2">
-						<li>회사가 서비스를 제공하지 않은 국가에서 비정상적이거나 우회적인 방법을 통해 서비스를 이용하려고 신청하는 경우</li>
-					</ol>
-					<ol type="a" id="199385b8-c609-4310-ada0-305b567ba0f3" class="numbered-list" start="3">
-						<li>관련 법령에서 금지하는 행위를 할 목적으로 신청 하는 경우</li>
-					</ol>
-					<ol type="a" id="2305e9cf-faaf-49fe-bf9c-05bfd8034347" class="numbered-list" start="4">
-						<li>사회의 안녕과 질서 또는 미풍양속을 저해할 목적으로 신청한 경우</li>
-					</ol>
-					<ol type="a" id="96f436b2-f83a-487b-92c4-9b7cea760556" class="numbered-list" start="5">
-						<li>부정한 용도로 서비스를 이용하고자 하는 경우</li>
-					</ol>
-					<ol type="a" id="6491b1b1-c036-4d5b-9917-1e8c3e01e002" class="numbered-list" start="6">
-						<li>영리를 추구할 목적으로 서비스를 이용하고자 하는 경우</li>
-					</ol>
-					<ol type="a" id="2910d723-871f-4179-b20d-414a7a797995" class="numbered-list" start="7">
-						<li>만 14세 미만 아동이 법정대리인의 동의를 얻지 아니한 경우</li>
-					</ol>
-					<ol type="a" id="75c57bb6-1cbb-4711-b1ce-41ee4c6a6315" class="numbered-list" start="8">
-						<li>그 밖에 각 호에 준하는 사유로서 승낙이 부적절하다고 판단되는 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="86151c9c-60b7-4678-8563-7299e8c97092" class="numbered-list" start="3">
-				<li>회사는 다음 각 호의 어느 하나에 해당하는 경우 그 사유가 해소될 때까지 승낙을 유보할 수 있습니다.<ol type="a"
-						id="cbcdc52a-4569-45f1-b83a-ca50fa9d4fbd" class="numbered-list" start="1">
-						<li>회사의 설비에 여유가 없거나, 특정 단말기의 지원이 어렵거나, 기술적 장애가 있는 경우</li>
-					</ol>
-					<ol type="a" id="f72f3f67-7be1-4c96-85f9-8386dcfcd51c" class="numbered-list" start="2">
-						<li>서비스 상의 장애 또는 서비스 이용요금, 결제수단의 장애가 발생한 경우</li>
-					</ol>
-					<ol type="a" id="72a45c8f-4014-4646-a690-f27d8f61aef6" class="numbered-list" start="3">
-						<li>그 밖의 각 호에 준하는 사유로서 이용신청의 즉각적인 승낙이 어렵다고 판단되는 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<h3 id="d3e5c31e-be65-4e92-8607-0633f6c685cb" class="">제5조 미성년자의 회원가입에 관한 특칙</h3>
-			<ol type="1" id="d184a7ac-4246-4473-bbc0-913a81d542ec" class="numbered-list" start="1">
-				<li>만 14세 미만의 “이용자”는 이용약관 및 개인정보처리방침에 대하여 충분히 숙지하고 부모 등 법정대리인의 동의를 얻은 후에 이용계약 체결(회원가입을 신청)을 하고 본인의 개인정보를
-					제공하여야 합니다.</li>
-			</ol>
-			<ol type="1" id="1981498c-3abf-48a1-b95d-23478c616c07" class="numbered-list" start="2">
-				<li>회사는 부모 등 법정대리인의 동의에 대한 확인절차를 거치지 않은 14세 미만 이용자에 대하여는 가입을 취소 또는 불허합니다.</li>
-			</ol>
-			<ol type="1" id="89691997-7f16-4b0f-b606-453d058f9f3b" class="numbered-list" start="3">
-				<li>만 14세 미만 이용자” 부모 등 법정대리인은 아동에 대한 개인정보의 열람, 정정, 갱신을 요청하거나 회원가입에 대한 동의를 철회할 수 있으며, 이러한 경우에 회사는 지체 없이
-					필요한 조치를 취해야 합니다.&quot;</li>
-			</ol>
-			<h3 id="c447301f-0d1b-46b7-a4ab-8b7730c498e9" class="">제6조 약관 외 준칙</h3>
-			<p id="94824ad0-6358-4022-87d9-f3cd66a4b4f1" class="">이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 「전자상거래 등에서의 소비자보호에
-				관한 법률」,「약관의 규제에 관한 법률」, ,「정보통신망이용촉진 및 정보보호 등에 관한 법률」,「콘텐츠산업진흥법」 등 관련 법령 또는 상 관례에 따릅니다.</p>
-			<h3 id="86af0a5c-e985-465e-a781-21aeb46e8508" class="">제7조 운영정책</h3>
-			<ol type="1" id="2322d821-9196-447b-809f-ebeb471dc812" class="numbered-list" start="1">
-				<li>약관을 적용하기 위하여 필요한 사항과 약관에서 구체적 범위를 정하여 위임한 사항을 서비스 운영정책(이하 “운영정책”이라 합니다)으로 정할 수 있습니다. 이 경우 “운영정책” 등은
-					본 약관에 대한 동일한 효력을 갖습니다.</li>
-			</ol>
-			<ol type="1" id="32ad3502-3b59-43a3-bda4-e1e916257943" class="numbered-list" start="2">
-				<li>운영정책은 본 약관 내용의 일부로서 회원은 본 약관에 동의하는 것으로 운영정책에도 동의하는 것입니다.</li>
-			</ol>
-			<h3 id="e56428bb-1f7a-4dda-9231-609234deee57" class="">제8조 개인정보의 보호 및 관리</h3>
-			<ol type="1" id="2a7ada34-fa7d-4f6d-8b61-addb844ad6f2" class="numbered-list" start="1">
-				<li>“회사”는 관련 법령이 정하는 바에 따라 “회원”의 개인정보를 보호하기 위해 노력하며, 개인정보의 보호 및 사용에 대해서는 관련 법령 및 회사의 개인정보 처리방침에 따릅니다.
-					다만, 회사가 제공하는 “서비스” 이외의 링크된 서비스에서는 회사의 개인정보 처리방침이 적용되지 않습니다.</li>
-			</ol>
-			<ol type="1" id="c8336918-0415-4728-820d-9ecd9326d3ee" class="numbered-list" start="2">
-				<li>회사는 관련 법령에 의해 관련 국가기관 등의 요청이 있는 경우를 제외하고는 회원의 개인정보를 본인의 동의 없이 타인에게 제공하지 않습니다.</li>
-			</ol>
-			<ol type="1" id="688edb31-d337-4f28-85da-6b785fa618a5" class="numbered-list" start="3">
-				<li>회사는 회원의 귀책사유로 개인정보가 유출되어 발생한 피해에 대하여 책임을 지지 않습니다. 다만, 회사의 귀책사유로 인한 경우에는 그러하지 않습니다.</li>
-			</ol>
-			<ol type="1" id="b83bd640-05f0-4d57-99d6-e1fc36f8dd2f" class="numbered-list" start="4">
-				<li>회사는 회원의 개인정보보호를 위하여 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」상 개인정보 유효기간 제도에 따라 마지막 접속일로부터 1년간 접속이력이 없는 회원의 개인정보를
-					파기 또는 분리하여 별도로 저장 관리하며, 이에 따라 1년간 접속 이력이 없는 회원의 계정은 휴면계정으로 처리되어 회원의 별도 요청이 없는 한 사용이 제한됩니다. 다만, 회원이
-					회사가 정한 절차에 따라 개인정보의 유효기간을 달리 설정하는 경우, 회사는 설정된 기간에 따라 회원의 계정을 휴면계정으로 처리합니다.</li>
-			</ol>
-			<h3 id="95bdf976-4658-4568-894f-93a6c8f4fc8b" class="">제9조 회사의 의무</h3>
-			<ol type="1" id="124a199c-8aa2-425d-87dc-b68f371409ff" class="numbered-list" start="1">
-				<li>“회사”는 관련 법령, 이 약관에서 정하는 권리의 행사 및 의무의 이행을 신의에 따라 성실하게 준수합니다.</li>
-			</ol>
-			<ol type="1" id="73e9d7f4-6071-407b-a930-f893911ade41" class="numbered-list" start="2">
-				<li>회사는 회원이 안전하게 서비스를 이용할 수 있도록 개인정보(신용정보 포함)보호를 위해 보안시스템을 갖추어야 하며 개인정보 처리방침을 공시하고 준수합니다. 회사는 이 약관 및
-					개인정보 처리방침에서 정한 경우를 제외하고는 회원의 개인정보가 제3자에게 공개 또는 제공되지 않도록 합니다.</li>
-			</ol>
-			<ol type="1" id="2a280be4-80cc-40be-88ad-7e636fedf06c" class="numbered-list" start="3">
-				<li>회사는 계속적이고 안정적인 서비스의 제공을 위하여 서비스 개선을 하던 중 설비에 장애가 생기거나 데이터 등이 멸실․훼손된 때에는 천재지변, 비상사태, 현재의 기술로는 해결이
-					불가능한 장애나 결함 등 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구하도록 최선의 노력을 다합니다.</li>
-			</ol>
-			<h3 id="81d17ce1-b5dd-4dfb-8352-f3a7ab49fab3" class="">제10조 회원의 의무</h3>
-			<ol type="1" id="9ebc8349-bf9b-450f-b45e-64089d0ee4a0" class="numbered-list" start="1">
-				<li>“회원”은 “회사”에서 제공하는 “서비스”의 이용과 관련하여 다음 각 호에 해당하는 행위를 해서는 안 됩니다.<ol type="a"
-						id="82d1658e-ddb9-4e73-adf0-0f04b535a2a8" class="numbered-list" start="1">
-						<li>이용신청 또는 회원 정보 변경 시 허위사실을 기재하는 행위</li>
-					</ol>
-					<ol type="a" id="a085d57a-dc40-4c82-be75-81717c048bdc" class="numbered-list" start="2">
-						<li>회사가 제공하지 않는 서비스나 비정상적인 방법을 통해 사이버 자산(ID, 아이템, 가상 재화 등)을 매매 또는 증여하거나, 이를 취득하여 이용하는 행위</li>
-					</ol>
-					<ol type="a" id="f51c519f-29f3-4e99-ba71-41a476b01034" class="numbered-list" start="3">
-						<li>회사의 직원이나 운영자를 가장하거나 타인의 명의를 도용하여 글을 게시하거나 메일을 발송하는 행위, 타인으로 가장하거나 타인과의 관계를 허위로 명시하는 행위</li>
-					</ol>
-					<ol type="a" id="233eb3a0-ce93-4252-91ec-3b045871447e" class="numbered-list" start="4">
-						<li>타인의 신용카드⋅유/무선 전화⋅은행 계좌 등을 도용하여 유료 콘텐츠를 구매하는 행위, 다른 회원의 ID 및 비밀번호를 부정 사용하는 행위</li>
-					</ol>
-					<ol type="a" id="bfd8701c-bebd-4380-82c8-00ed80a16fb4" class="numbered-list" start="5">
-						<li>다른 회원의 개인정보를 무단으로 수집. 저장. 게시 또는 유포하는 행위</li>
-					</ol>
-					<ol type="a" id="7da327b1-6269-49fe-8bc6-33b6de66eda9" class="numbered-list" start="6">
-						<li>도박 등 사행행위를 하거나 유도하는 행위, 음란⋅저속한 정보를 교류. 게재하거나 음란 사이트를 연결(링크)하는 행위, 수치심. 혐오감 또는 공포심을 일으키는 말.
-							소리. 글. 그림. 사진 또는 영상을 타인에게 전송 또는 유포하는 행위 등 서비스를 불건전하게 이용하는 행위</li>
-					</ol>
-					<ol type="a" id="84384d35-6f75-4288-9b1b-e5fb073ede92" class="numbered-list" start="7">
-						<li>서비스를 무단으로 영리, 영업, 광고, 홍보, 정치활동, 선거운동 등 본래의 용도 이외의 용도로 이용하는 행위</li>
-					</ol>
-					<ol type="a" id="d7b6c9fb-b087-410e-abdc-7b99375ddc30" class="numbered-list" start="8">
-						<li>회사의 서비스를 이용하여 얻은 정보를 무단으로 복제. 유통. 조장하거나 상업적으로 이용하는 행위, 알려지거나 알려지지 않은 버그를 악용하여 서비스를 이용하는 행위
-						</li>
-					</ol>
-					<ol type="a" id="dd86790b-06a4-48bd-9d74-b456b3a3c94b" class="numbered-list" start="9">
-						<li>타인을 기망하여 이득을 취하는 행위, 회사의 서비스의 이용과 관련하여 타인에게 피해를 입히는 행위</li>
-					</ol>
-					<ol type="a" id="6ebfaabf-91db-434e-9dd9-c6b35a12f93a" class="numbered-list" start="10">
-						<li>회사나 타인의 지적재산권 또는 초상권을 침해하는 행위, 타인의 명예를 훼손하거나 손해를 가하는 행위</li>
-					</ol>
-					<ol type="a" id="051a2aba-ddff-4b72-b234-feb9d7f3bc07" class="numbered-list" start="11">
-						<li>법령에 의하여 전송 또는 게시가 금지된 정보(컴퓨터 프로그램)나 컴퓨터 소프트웨어, 하드웨어 또는 전기통신장비의 정상적인 작동을 방해, 파괴할 목적으로 고안된
-							바이러스, 컴퓨터 코드, 파일 및 프로그램 등을 고의로 전송. 게시. 유포 또는 사용하는 행위</li>
-					</ol>
-					<ol type="a" id="d76e2949-7849-40e1-a773-02748c23c000" class="numbered-list" start="12">
-						<li>회사로부터 특별한 권리를 부여 받지 않고 애플리케이션을 변경하거나, 애플리케이션에 다른 프로그램을 추가. 삽입하거나, 서버를 해킹. 역설계 하거나, 소스 코드나
-							애플리케이션 데이터를 유출. 변경하거나, 별도의 서버를 구축하거나, 웹사이트의 일부분을 임의로 변경 및 도용하여 회사를 사칭하는 행위</li>
-					</ol>
-					<ol type="a" id="e2319771-ca1d-4b65-8556-81669431807c" class="numbered-list" start="13">
-						<li>그 밖에 관련 법령에 위반되거나 선량한 풍속 기타 사회통념에 반하는 행위</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="462825cd-f7da-4ef7-b05d-1d95048ca526" class="numbered-list" start="2">
-				<li>회원의 계정 및 단말기에 관한 관리 책임은 회원에게 있으며, 이를 타인이 이용하도록 하게 하여서는 안 됩니다. 단말기의 관리 부실이나 타인에게 이용을 승낙함으로 인해 발생하는
-					손해에 대해서 회사는 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="7a8b65f0-ed6e-4895-a547-1f1aa385e105" class="numbered-list" start="3">
-				<li>회원은 각 오픈마켓에서 부정한 결제가 이루어지지 아니하도록 결제 비밀번호 기능을 설정하고 관리하여야 합니다. 회원의 부주의로 인하여 발생하는 손해에 대해 회사는 책임지지 않습니다
-				</li>
-			</ol>
-			<ol type="1" id="f7f8a1b3-07f8-48b5-9f29-8cfbb7e726d0" class="numbered-list" start="4">
-				<li>회사는 다음 각 호의 행위의 구체적인 내용을 정할 수 있으며, 회원은 이를 따라야 합니다.<ol type="a"
-						id="2231318b-87c6-437d-b00a-6027c8d3618a" class="numbered-list" start="1">
-						<li>회원의 계정명</li>
-					</ol>
-					<ol type="a" id="58801a46-530d-4776-9e8c-36b4e835a401" class="numbered-list" start="2">
-						<li>그룹명 및 채팅내용과 방법</li>
-					</ol>
-					<ol type="a" id="c101fc26-bec1-4146-bcda-09054d9db379" class="numbered-list" start="3">
-						<li>게시판이용 및 서비스이용 방법</li>
-					</ol>
-					<ol type="a" id="c84b5482-adc2-4671-9a6a-a33013b9a7b1" class="numbered-list" start="4">
-						<li>애플, 구글 등 외부 모바일 플랫폼 제휴 서비스 정책</li>
-					</ol>
-				</li>
-			</ol>
-			<h3 id="ac6fd9af-3019-4ff9-b7c3-5b6cee6fc783" class="">제11조 서비스의 제공</h3>
-			<ol type="1" id="2d69b1e8-cf4f-4fab-b1a4-259eff87bfb7" class="numbered-list" start="1">
-				<li>“회사”는 본 약관 제4조의 규정에 따라 이용계약이 완료된 “회원”에게 그 즉시 “서비스”를 이용할 수 있도록 합니다. 다만, 일부 서비스의 경우 회사의 필요에 따라 지정된
-					일자부터 서비스를 개시할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="a847b651-9de4-47ff-88ad-c10f7a5b1fd3" class="numbered-list" start="2">
-				<li>회사는 회원에게 서비스를 제공할 때 이 약관에 정하고 있는 서비스를 포함하여 기타 부가적인 서비스를 함께 제공할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="e869ae3c-fe2d-49db-8ff7-745a451f9a5c" class="numbered-list" start="3">
-				<li>회사는 회원의 등급을 구분하고 이용시간, 이용횟수, 제공 서비스의 범위 등을 세분화하여 이용에 차등을 둘 수 있습니다.</li>
-			</ol>
-			<h3 id="dba1ea8c-dde0-45bc-ba37-917d4cede068" class="">제12조 서비스의 이용</h3>
-			<ol type="1" id="3cc26a95-bfd8-4040-9538-de3df0034c95" class="numbered-list" start="1">
-				<li>“서비스”는 “회사”의 영업방침에 따라 정해진 시간 동안 제공합니다. (별도의 안내가 없는 경우 연중무휴 1일 24시간 제공하는 것을 원칙으로 합니다) 단, 관련법령에서 정하는
-					바에 따라 서비스 제공시간 등에 제한을 두어야 하는 경우, 회사는 별도의 사전 공지 없이 서비스의 제공시간을 제한 또는 변경 할 수 있으며 이에 대하여 어떠한 책임도 부담하지
-					않습니다.</li>
-			</ol>
-			<ol type="1" id="35fbfdde-f866-4bf9-8a33-3a11cd77c0fd" class="numbered-list" start="2">
-				<li>제1항에도 불구하고 회사는 다음 각 호의 경우에는 주 단위 또는 월 단위로 일정 시간을 정하여 서비스의 전부 또는 일부를 일시 정지할 수 있습니다. 이 경우 회사는 사전에 그
-					정지의 사유와 기간을 서비스 공지사항 등에 공지합니다. 다만, 사전에 공지할 수 없는 부득이한 사정이 있는 경우 사후에 공지할 수 있습니다.<ol type="a"
-						id="66685557-7796-4b52-b8da-f12b88e3e59a" class="numbered-list" start="1">
-						<li>컴퓨터 등 정보통신설비의 보수점검, 교체, 정기점검 또는 서비스의 내용 수정을 위하여 필요한 경우</li>
-					</ol>
-					<ol type="a" id="6d8e80be-a5dc-4a58-b20c-675863ce5e38" class="numbered-list" start="2">
-						<li>해킹 등의 전자적 침해사고, 통신사고, 회원들의 비정상적인 이용행태, 미처 예상하지 못한 서비스의 불안정성에 대응하기 위하여 필요한 경우</li>
-					</ol>
-					<ol type="a" id="ec3ad311-892c-4bcb-9382-be121bd8bfe8" class="numbered-list" start="3">
-						<li>관련 법령에서 특정 시간 또는 방법으로 서비스 제공을 금지하는 경우</li>
-					</ol>
-					<ol type="a" id="0dd5de48-f3f6-4a28-998d-df2cbe5512b9" class="numbered-list" start="4">
-						<li>천재지변, 비상사태, 정전, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 정상적인 서비스 제공이 불가능할 경우</li>
-					</ol>
-					<ol type="a" id="f492050b-5293-4de6-85b5-bfdd617f4382" class="numbered-list" start="5">
-						<li>회사의 분할, 합병, 영업양도, 영업의 폐지, 당해 서비스의 수익 악화 등 회사의 경영상 중대한 필요에 의한 경우</li>
-					</ol>
-					<ol type="a" id="05524c55-af7f-401f-9bcd-168df3fbe031" class="numbered-list" start="6">
-						<li>그 밖의 각 호에 준하는 사유로서 서비스의 전부 또는 일부를 정지해야 된다고 판단되는 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="b793adab-f0f8-44f0-974a-9ac597205321" class="numbered-list" start="3">
-				<li>회사는 단말기를 위한 전용 애플리케이션 또는 네트워크를 이용하여 서비스를 제공합니다. 회원은 애플리케이션을 다운로드하여 설치하거나 네트워크를 이용하여 무료 또는 유료로 서비스를
-					이용할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="97bc2881-c8f2-4c1c-bfff-d87dd7c682ed" class="numbered-list" start="4">
-				<li>유료 콘텐츠의 경우에는 해당 서비스에 명시된 요금을 지급하여야 이용할 수 있습니다. 네트워크를 통해 애플리케이션을 다운로드 하거나 서비스를 이용하는 경우에는 가입한 이동통신사에서
-					정한 별도의 요금이 발생할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="d723f8ec-88c6-4c3a-a8bd-c870cde14c45" class="numbered-list" start="5">
-				<li>다운로드 하여 설치한 애플리케이션 또는 네트워크를 통해 이용하는 서비스의 경우에는 단말기 또는 이동통신사의 특성에 맞도록 제공됩니다. 단말기의 변경, 모바일 기기의 번호 변경 또는
-					해외 로밍의 경우에는 콘텐츠의 전부 또는 일부의 이용이 불가능할 수 있으며, 이 경우 회사는 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="c1548bec-8302-422f-bb8d-37ed7a22314b" class="numbered-list" start="6">
-				<li>다운로드하여 설치한 애플리케이션 또는 네트워크를 통해 이용하는 서비스의 경우에는 백그라운드 작업이 진행될 수 있습니다. 이 경우 단말기 또는 이동통신사의 특성에 맞도록 추가요금이
-					발생할 수 있으며 이와 관련하여 회사는 책임을 지지 않습니다.</li>
-			</ol>
-			<h3 id="32a672fd-85d0-44d3-b6de-4122994967cc" class="">제13조 서비스의 변경 및 중단</h3>
-			<ol type="1" id="084642c0-e2bc-4e7c-9b55-cf33d99cb22b" class="numbered-list" start="1">
-				<li>“회사”는 원활한 서비스 제공을 위해 운영상 또는 기술상의 필요에 따라 “서비스”를 변경할 수 있으며, 변경 전에 해당 내용을 “서비스” 공지사항 등에 공지합니다. 다만, 버그 및
-					오류 등의 수정이나 긴급 업데이트 등 부득이하게 변경할 필요가 있는 경우 또는 중대한 변경에 해당하지 않는 경우에는 사후에 공지할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="224eb051-3ca8-41a7-adc2-044d80078228" class="numbered-list" start="2">
-				<li>회사는 무료로 제공되는 서비스의 일부 또는 전부를 회사의 정책 및 운영 필요성에 의하여 수정, 중단, 변경할 수 있습니다. 이에 대하여 관계 법령에 특별한 규정이 없는 한 회사는
-					회원에게 기대수익의 상실, 회사가 직접 제공하지 않은 수익의 상실 또는 기타 무료로 제공된 서비스의 수정, 중단, 변경 등으로 발생하는 손해에 대하여 별도의 보상을 하지 않습니다.
-				</li>
-			</ol>
-			<ol type="1" id="ea2c453c-0bec-4ab5-8287-2645b37f8a6a" class="numbered-list" start="3">
-				<li>회사가 기술 상 경영 상의 사유로 서비스를 영구적으로 종료하는 경우, 해당 서비스의 종료에 관한 사실을 30일 전부터 홈페이지 또는 서비스 내에 공지한 후 종료합니다. 사전에
-					통지할 수 없는 부득이한 사정이 있는 경우에는 사후에 통지를 할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="90b7d8ba-9e77-4d55-839f-2f419950f775" class="numbered-list" start="4">
-				<li>제3항에 따라 서비스가 종료되는 경우 회사는 사용하지 않았거나 사용기간이 남아 있는 유료 콘텐츠에 대해 제24조에 따라 환급합니다.</li>
-			</ol>
-			<h3 id="8f581d28-c7f7-43a9-9694-2eb1b6a3ab1e" class="">제14조 정보의 수집 등</h3>
-			<ol type="1" id="29220946-d797-47f7-bbad-d93fa4c08484" class="numbered-list" start="1">
-				<li>“회사”는 “회원”간에 이루어지는 “게시물”을 저장 및 보관할 수 있으며 이 정보는 “회사”만이 보유합니다. 회사는 회원간의 분쟁 조정, 민원 처리 또는 질서의 유지를 위한 경우에
-					한하여, 제3자는 법령에 따라 권한이 부여된 경우에 한하여 이 정보를 열람할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="bf660e0e-7165-42d7-849a-01507b13ddfc" class="numbered-list" start="2">
-				<li>회사 또는 제3자가 1항에 따라 채팅 정보를 열람할 경우 회사는 사전에 열람의 사유 및 범위를 해당 회원에게 고지합니다. 다만, 제10조 1항에 따른 금지행위의 조사, 처리, 확인
-					또는 그 행위로 인한 피해 구제와 관련하여 이 정보를 열람해야 할 경우에는 사후에 고지할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="3f6bbed9-912f-455a-ac14-0fd16f35a809" class="numbered-list" start="3">
-				<li>회사는 서비스의 원활하고 안정적인 운영 및 서비스 품질의 개선을 위하여 회원의 개인정보를 제외한 회원의 단말기 정보(설정, 사양, 운영체제, 버전 등)를 수집 및 활용할 수
-					있습니다.</li>
-			</ol>
-			<ol type="1" id="1019cca4-310e-4d62-82c5-0f8224bd22d2" class="numbered-list" start="4">
-				<li>회사는 서비스 개선 및 회원 대상 서비스 소개 등을 위한 목적으로 회원에게 추가정보를 요청할 수 있습니다. 이 요청에 대해 회원은 승낙하거나 거절할 수 있으며, 회사가 이 요청을
-					할 경우에는 회원이 이 요청을 거절할 수 있다는 뜻을 함께 고지합니다.</li>
-			</ol>
-			<h3 id="6ef83583-b144-4b64-a23c-cd13eebe325b" class="">제15조 광고의 제공</h3>
-			<ol type="1" id="70848ac8-14ae-4070-8de5-317d3f65ce82" class="numbered-list" start="1">
-				<li>“회사”는 “서비스”의 운영과 관련하여 “서비스” 내에 광고를 게재할 수 있습니다. 또한 수신에 동의한 “회원”에 한하여 문자서비스(LMS/SMS), 푸시메시지(Push
-					Notification) 등의 방법으로 광고성 정보를 전송할 수 있습니다. 이 경우 “회원”은 언제든지 수신을 거절할 수 있으며, “회사”는 “회원”의 수신 거절 시 광고성 정보를
-					발송하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="ffb7734c-89d5-4fe3-ae10-751a37d6a41c" class="numbered-list" start="2">
-				<li>회사가 제공하는 서비스 중의 배너 또는 링크 등을 통해 타인이 제공하는 광고나 서비스에 연결될 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="1341d720-88a1-414f-92fc-10a5f3eac36e" class="numbered-list" start="3">
-				<li>제2항에 따라 타인이 제공하는 광고나 서비스에 연결될 경우 해당 영역에서 제공하는 서비스는 회사의 서비스 영역이 아니므로 회사가 신뢰성, 안정성 등을 보장하지 않으며, 그로 인한
-					회원의 손해에 대하여도 회사는 책임을 지지 않습니다. 다만, 회사가 고의 또는 중과실로 손해의 발생을 용이하게 하거나 손해 방지를 위한 조치를 취하지 아니한 경우에는 그러하지
-					아니합니다.</li>
-			</ol>
-			<h3 id="d6519085-ffed-4343-9cf6-6e3c76a1e2c1" class="">제16조 저작권 등의 귀속</h3>
-			<ol type="1" id="4fad0967-6423-458f-9606-37650b99cc95" class="numbered-list" start="1">
-				<li>“회사”가 제작한 “서비스” 내의 “콘텐츠”에 대한 저작권과 기타 지적재산권은 회사에 귀속합니다. “회사”는 “콘텐츠”가 제3자의 저작권을 침해할 우려가 있는 경우 “회원”에게
-					별도의 공지없이 “콘텐츠”의 외관, 디자인, 성능을 변경할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="6b49a1a1-c777-42ff-9237-bdd74bd90dc4" class="numbered-list" start="2">
-				<li>회원은 회사가 제공하는 서비스를 이용하여 얻은 정보 중에서 회사 또는 제공업체에 지적재산권이 귀속된 정보를 회사 또는 제공업체의 사전 동의 없이 복제 및 전송 등의 방법(편집,
-					공표, 공연, 배포, 방송, 2차적 저작물 작성 등을 포함합니다. 이하 같습니다)에 의하여 영리목적으로 이용하거나 타인에게 이용하게 하여서는 안 됩니다.</li>
-			</ol>
-			<ol type="1" id="1aa87b55-3178-4045-9d1a-016f547195f6" class="numbered-list" start="3">
-				<li>회원은 애플리케이션 내에서 보여지거나 서비스와 관련하여 회사, 회원 또는 다른 이용자가 애플리케이션 또는 서비스를 통해 업로드 또는 전송하는 콘텐츠 또는 게시물에 대하여 다음과
-					같은 방법과 조건으로 이용하는 것을 허락합니다.<ol type="a" id="2b1749e7-7aec-48e2-939d-3acce504fd72"
-						class="numbered-list" start="1">
-						<li>해당 콘텐츠 또는 게시물를 이용, 편집 형식의 변경 및 기타 변형하는 것(공표, 복제, 공연, 전송, 배포, 방송, 2차적 저작물 작성 등 어떠한 형태로든 이용
-							가능하며, 이용기간과 지역에는 제한이 없음)</li>
-					</ol>
-					<ol type="a" id="3d20a417-8a52-46b0-a31e-040f7b638ddc" class="numbered-list" start="2">
-						<li>이용자 콘텐츠를 제작한 이용자의 사전 동의 없이 거래를 목적으로 이용자 콘텐츠를 판매, 대여, 양도 행위를 하지 않음</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="f739803b-5c2a-4b39-b40f-3998cc5fc55c" class="numbered-list" start="4">
-				<li>애플리케이션 내에서 보여지지 않고 서비스와 일체화되지 않은 회원의 이용자 콘텐츠(예컨대, 일반게시판 등에서의 게시물)에 대하여 회사는 회원의 명시적인 동의가 없이 이용하지 않으며,
-					회원은 언제든지 이러한 이용자 콘텐츠를 삭제할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="da8ce380-3df4-496c-aa5c-91c1b43d1e9c" class="numbered-list" start="5">
-				<li>회사는 회원이 게시하거나 등록하는 서비스 내의 게시물에 대해 제10조 1항에 따른 금지행위에 해당된다고 판단되는 경우에는 사전 통지 없이 이를 삭제 또는 이동하거나 그 등록을
-					거절할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="7393310a-8a26-4dd8-99a9-5ec8f4ab7d06" class="numbered-list" start="6">
-				<li>회사가 운영하는 게시판 등에 게시된 정보로 인하여 법률상 이익이 침해된 회원은 회사에 해당 정보의 삭제 또는 반박 내용의 게재를 요청할 수 있습니다. 이 경우 회사는 신속하게
-					필요한 조치를 취하고 이를 신청인에게 통지합니다.</li>
-			</ol>
-			<ol type="1" id="696af6c5-be44-4cfd-9810-dd6dcb3b7379" class="numbered-list" start="7">
-				<li>본 조는 회사가 서비스를 운영하는 동안 유효하며, 회원 탈퇴 후에도 지속적으로 적용됩니다.</li>
-			</ol>
-			<ol type="1" id="33693fd3-c653-4c5c-91a9-ae8d702e8d92" class="numbered-list" start="8">
-				<li>회원이 서비스 내에 게시한 사진, 메모 등의 게시물의 저작권은 서로 그룹으로 연결된 회원들에게 귀속됩니다.</li>
-			</ol>
-			<ol type="1" id="e9e76723-da32-4f35-a452-f651ca257107" class="numbered-list" start="9">
-				<li>회원이 게재한 “게시물”로 인해 발생하는 손실이나 문제는 회원 개인의 책임이며 회사는 이에 대한 책임을 지지 않습니다.</li>
-			</ol>
-			<h3 id="28dfb127-b595-4ed6-a84d-092024ed9013" class="">제17조 게시물의 관리</h3>
-			<ol type="1" id="cfcdb04d-ddd9-42f8-ad01-a55856d0cfcc" class="numbered-list" start="1">
-				<li>“회원”의 “게시물”이 관련법에 위반되는 내용을 포함하는 경우, 권리자는 관련법이 정한 절차에 따라 해당 “게시물”의 게시중단 및 삭제 등을 요청할 수 있으며, “회사”는 관련법에
-					따라 조치를 취하여야 합니다.</li>
-			</ol>
-			<ol type="1" id="63562330-d6b5-4cf9-aadc-e6b661a7b489" class="numbered-list" start="2">
-				<li>회사는 1항에 따른 권리자의 요청이 없는 경우라도 권리침해가 인정될 만한 사유가 있거나 기타 회사 정책 및 관련법에 위반되는 경우에는 관련법에 따라 해당 게시물에 대해 임시조치
-					등을 취할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="96fd777f-7b16-43a1-95b2-321272bab9a9" class="numbered-list" start="3">
-				<li>회사는 관계 법령 또는 이 약관의 준수 여부 등을 확인할 필요가 있을 때, 게시물의 내용을 확인할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="365b483f-1250-4dc4-bf9b-8068119beed3" class="numbered-list" start="4">
-				<li>게시물 일부는 일정 기간 이후에는 서비스 상에서 삭제될 수 있으며, 게시물에 대한 관리 책임은 회원에게 있습니다. 회원의 게시물이 타인의 권리를 침해하였음을 이유로 타인으로부터
-					회사가 손해배상청구 등의 이의 제기를 받은 경우, 해당 게시물을 작성한 회원은 회사의 면책을 위하여 적극적으로 협조하여야 하며, 회사가 면책되지 못한 경우 회원은 그로 인해 발생한
-					문제에 대해 책임을 부담하여야 합니다.</li>
-			</ol>
-			<ol type="1" id="c11d6cb2-35d2-4227-bab2-d75cdccd331b" class="numbered-list" start="5">
-				<li>회사는 서로 그룹으로 연결된 회원이 더 이상 연결을 원하지 않을 경우, 게시물에 대한 접근을 차단할 수 있는 연결 끊기 기능을 제공하고 있습니다. 연결 끊기를 했거나 앱에 접속 안
-					한 지 1년 이상 된 경우에 해당하는 경우 연결끊기 처리되며, 연결 끊기 기능 사용으로 인해 연결이 끊어진 계정은 재연결 없이 30일이 경과한 경우, 해당 계정은 휴면 계정으로
-					처리되며 공유한 모든 게시물을 영구 삭제할 수 있습니다.</li>
-			</ol>
-			<h3 id="f1823c4a-a2b3-475d-955e-1583c23a5a30" class="">제18조 유료 콘텐츠의 구매, 사용기간 및 이용</h3>
-			<ol type="1" id="60d56d49-d135-43dd-8f51-2e4a22901d79" class="numbered-list" start="1">
-				<li>서비스 내에서 “회원”이 구매한 유료 “콘텐츠”는 해당 애플리케이션을 다운로드 받거나 설치한 단말기에서만 이용할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="b3f6e2ce-f4e7-4f7e-b00f-9f77aeb1061c" class="numbered-list" start="2">
-				<li>회원이 구매한 유료 콘텐츠의 이용기간은 구매 시 명시된 기간에 따릅니다. 다만, 제13조 4항에 따라 서비스 중단이 이루어지는 경우 기간의 정함이 없는 유료 콘텐츠의 이용기간은
-					서비스 중단 공지 시 공지된 서비스의 중단일자까지로 합니다.</li>
-			</ol>
-			<ol type="1" id="728f32f5-3142-4194-8312-da574814ee5c" class="numbered-list" start="3">
-				<li>회사는 회원의 유료 콘텐츠에 대한 이용신청이 다음 각 호에 해당하는 경우에는 승낙하지 않거나 승낙을 유보할 수 있습니다. 이용신청의 승인을 유보하거나 승낙하지 아니하는 경우,
-					회사는 이를 이용 신청한 회원에게 알려야 하며, 다만 회사의 귀책사유 없이 회원에게 통지할 수 없는 경우는 예외로 합니다.<ol type="a"
-						id="9b045462-d5ef-4a66-b993-60c890662b92" class="numbered-list" start="1">
-						<li>실명이 아니거나 타인의 명의를 이용한 경우</li>
-					</ol>
-					<ol type="a" id="79460b13-4751-446e-a9ec-fa37eae84759" class="numbered-list" start="2">
-						<li>허위의 정보를 기재하거나, 회사가 제시하는 내용을 기재하지 않은 경우</li>
-					</ol>
-					<ol type="a" id="8b4c6862-ffa3-4051-b0e1-c7a0a507ce91" class="numbered-list" start="3">
-						<li>미성년자가 청소년보호법 등 관련법에 의해서 이용이 금지되는 유료 콘텐츠를 이용하고자 하는 경우</li>
-					</ol>
-					<ol type="a" id="c65176ea-e387-458d-9c07-d973665063ca" class="numbered-list" start="4">
-						<li>서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우</li>
-					</ol>
-					<ol type="a" id="b88b1298-71bb-4fc1-bbcf-6a1ad1a16aea" class="numbered-list" start="5">
-						<li>이용 요금을 납부하지 않거나 납부자를 확인할 수 없는 경우</li>
-					</ol>
-					<ol type="a" id="ece3e8ce-2ec2-47b8-8f8b-52c65c2a832d" class="numbered-list" start="6">
-						<li>만 19세 미만의 미성년자가 법정대리인의 동의 없이 신청한 경우</li>
-					</ol>
-					<ol type="a" id="2f4de4b5-d9b3-472f-babf-92bc3e9913e2" class="numbered-list" start="7">
-						<li>명의자의 동의나 승낙 없이 결제 수단을 무단 도용하여 이용요금을 결제한 경우</li>
-					</ol>
-					<ol type="a" id="d2a93a54-89db-47a5-8078-be216ffc0047" class="numbered-list" start="8">
-						<li>그 밖에 회원의 귀책사유로 승인이 불가능하다고 판단되는 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<h3 id="9110a60f-c2a7-4f2b-8063-1002dfe1e5a0" class="">제19조 회원에 대한 서비스 이용제한</h3>
-			<ol type="1" id="34a1325c-b4dd-4ae9-bda2-23deb7f64469" class="numbered-list" start="1">
-				<li>“회원”은 제10조에 따른 “회원”의 의무를 위반하는 행위를 하여서는 안 되며, 해당 행위를 하는 경우에 “회사”는 다음 각 호의 구분에 따른 “회원”의 “서비스” 이용제한, 관련
-					정보(글, 사진, 영상 등) 삭제 및 기타의 조치를 포함한 이용제한 조치를 할 수 있습니다. 이용제한 조치가 이루어지는 구체적인 사유 및 절차는 운영정책에서 정할 수 있습니다.
-					<ol type="a" id="d9a2baff-a5e3-4d82-b6d7-21e53e251be3" class="numbered-list" start="1">
-						<li>단말 이용 제한 : 일정기간 또는 영구히 해당 단말의 서비스 접속을 제한</li>
-					</ol>
-					<ol type="a" id="f20c9ea8-eaa8-493d-b435-010d8c19323d" class="numbered-list" start="2">
-						<li>계정 이용 제한 : 일정기간 또는 영구히 계정의 서비스 이용을 제한</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="c29f518a-e042-430e-965b-6a68acbfb5cc" class="numbered-list" start="2">
-				<li>제1항의 이용제한이 정당한 경우에 회사는 이용제한으로 인하여 회원이 입은 손해를 배상하지 않습니다.</li>
-			</ol>
-			<ol type="1" id="986683b2-a35b-4bce-bf98-60ff41610bec" class="numbered-list" start="3">
-				<li>회사는 다음 각 호의 사유에 대한 조사가 완료될 때까지 해당 계정의 서비스 이용을 정지할 수 있습니다.<ol type="a"
-						id="81d9b118-043e-46da-94d1-73ebc46b055d" class="numbered-list" start="1">
-						<li>계정이 해킹 또는 도용 당했다는 정당한 신고가 접수된 경우</li>
-					</ol>
-					<ol type="a" id="70716e08-2b82-4276-8e81-ecc2fe302cad" class="numbered-list" start="2">
-						<li>불법프로그램 사용자 또는 작업장 등 위법행위자로 의심되는 경우</li>
-					</ol>
-					<ol type="a" id="0f349db0-07a7-4cbb-82bd-2d29400a85d2" class="numbered-list" start="3">
-						<li>그 밖에 각 호에 준하는 사유로 서비스 이용 정지의 잠정조치가 필요한 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="5de9d5a0-2c3b-4812-9311-cfd2eb782a65" class="numbered-list" start="4">
-				<li>회사가 용인하지 않는 방법을 통해 재화 및 아이템 등의 정보를 획득한 경우 회사는 운영정책에 따라 서비스 이용제한, 재화 및 아이템 회수 등의 필요 조치를 취할 수 있습니다.
-				</li>
-			</ol>
-			<h3 id="cc0713f0-b74b-4a6e-a609-d1d0282c4c8f" class="">제20조 이용제한의 사유와 절차</h3>
-			<ol type="1" id="71acaccc-3575-46d1-9ac5-59d192f4957d" class="numbered-list" start="1">
-				<li>“회사”는 제19조 1항에 따른 이용제한 조치의 구체적인 사유 및 절차를 제10조 1항에 따른 금지행위의 내용․정도․횟수․결과 등을 고려하여 운영정책으로 정합니다.</li>
-			</ol>
-			<ol type="1" id="e56ecd51-707a-41ce-8040-a16f77761ec3" class="numbered-list" start="2">
-				<li>회사가 제19조에서 정한 이용제한을 하는 경우에는 회원에게 서비스 초기 화면에서 게시하는 방법으로 다음 각 호의 사항을 회원에게 통보합니다.<ol type="a"
-						id="772c62b5-e6ea-43cd-bac0-d1df51fe2b44" class="numbered-list" start="1">
-						<li>이용제한 사유</li>
-					</ol>
-					<ol type="a" id="43c38c22-8c6b-475b-a3d5-add69caa8fd3" class="numbered-list" start="2">
-						<li>이용제한 유형 및 기간</li>
-					</ol>
-				</li>
-			</ol>
-			<h3 id="3f5a81ce-f5e1-4484-a0ad-d1d19a35e2ac" class="">제21조 이용제한 조치에 대한 이의신청 절차</h3>
-			<ol type="1" id="0090c4b1-4b2d-411c-9b83-61f7fe707d20" class="numbered-list" start="1">
-				<li>“회원”이 “회사”의 이용제한 조치에 불복하고자 할 때에는 이 조치의 통지를 받은 날부터 14일 이내에 불복 이유를 기재한 이의 신청서를 서면, 전자우편 또는 이에 준하는 방법으로
-					회사에 제출하여야 합니다.</li>
-			</ol>
-			<ol type="1" id="cfd4e3aa-deac-4b6a-acb1-b9c1ce601d07" class="numbered-list" start="2">
-				<li>회사는 제1항의 이의신청서를 접수한 날부터 15일 이내에 불복 이유에 대하여 서면, 전자우편 또는 이에 준하는 방법으로 답변합니다. 다만, 회사는 이 기간 내에 답변이 어려운
-					경우에는 그 사유와 처리일정을 통지합니다.</li>
-			</ol>
-			<ol type="1" id="f2d2bd64-5bf1-4a73-b3e5-7203b51c588f" class="numbered-list" start="3">
-				<li>회사는 불복 이유가 타당한 경우에는 이에 따른 조치를 취합니다.</li>
-			</ol>
-			<h3 id="8e45e7c5-057d-4cde-bfbe-92e4402cca2d" class="">제22조 대금결제</h3>
-			<ol type="1" id="c22e4aa7-6991-489b-afbc-848bac02a662" class="numbered-list" start="1">
-				<li>“콘텐츠”에 대한 구매 대금의 부과와 납부는 원칙적으로 이동통신사나 오픈마켓 사업자 등에서 정하는 정책이나 방법에 따릅니다. 또한 각 결제수단별 한도가 회사나 오픈마켓 사업자가
-					정하는 정책 또는 정부의 방침에 따라 부여되거나 조정될 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="c5d0888a-4efc-4a08-b793-917f2dabb31a" class="numbered-list" start="2">
-				<li>콘텐츠의 구매대금을 외화로 결제하는 경우에는 환율‧수수료 등으로 인하여 실제 청구금액이 서비스의 상점 등에서 표시된 가격과 달라질 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="7a5ddbf4-fcf3-4f8f-8dc7-ec28e34d33c4" class="numbered-list" start="3">
-				<li>회사는 결제의 이용을 위하여 반드시 필요한 회원의 개인정보를 추가적으로 요구할 수 있으며, 회원은 회사가 요구하는 개인정보를 정확하게 제공하여야 합니다. 회사는 회원이 허위로 또는
-					부정확하게 제공한 개인정보로 인하여 회원에게 발생하는 손해에 대하여 회사의 고의, 과실이 없는 한 회원의 손해를 배상할 책임을 부담하지 않습니다.</li>
-			</ol>
-			<ol type="1" id="e980d135-07d4-4505-8ca8-2ea31943c7e8" class="numbered-list" start="4">
-				<li>만 19세 미만의 미성년자가 신용카드, 휴대폰 결제 등을 이용하여 대금을 지급할 때에는 법정대리인의 동의를 받아야 합니다.</li>
-			</ol>
-			<ol type="1" id="08abaa88-161c-4e2c-af54-c359a53881a9" class="numbered-list" start="5">
-				<li>만 19세 미만의 미성년자인 회원이 그 법정대리인의 동의를 받지 않고 요금결제 등 의무부담행위를 한 경우, 미성년자인 회원 또는 그 미성년자의 법정대리인은 관련법령에 따라 해당
-					계약을 취소할 수 있습니다. 단, 미성년자의 사술로 인한 경우는 제외됩니다.</li>
-			</ol>
-			<ol type="1" id="5bb919fb-6fe4-4f99-814d-f757222d879c" class="numbered-list" start="6">
-				<li>회사는 유료 콘텐츠 이용 도중 요금이 변경되더라도 이미 결제된 요금 대비 증감된 요금에 대하여 추가로 청구하거나 환불하지 않습니다.</li>
-			</ol>
-			<h3 id="02128a8d-96ff-4791-b69f-f761be4bc4a5" class="">제23조 청약의 철회 등</h3>
-			<ol type="1" id="a3049a8d-ef14-4ecb-a66c-039d9f6b2650" class="numbered-list" start="1">
-				<li>“회사”가 제공하는 유료 “콘텐츠”는 「전자상거래 등에서의 소비자보호에 관한 법률」,「콘텐츠산업진흥법」 등 관련 법령에 따라 청약철회가 가능한 것과 제한되는 것으로 구분됩니다.
-					청약철회가 가능한 유료 “콘텐츠”의 경우 “회원”은 해당 유료 “콘텐츠”의 구매 후 7일 이내에 사용하지 아니한 유료 “콘텐츠”에 한하여 “회사”에 청약철회를 요청할 수 있습니다.
-				</li>
-			</ol>
-			<ol type="1" id="667d9b5f-30e8-479c-a415-bedfab62af36" class="numbered-list" start="2">
-				<li>회원은 23조 1항의 규정에 따라 다음 각 호의 어느 하나에 해당하는 경우에는 회사의 의사에 반하여 1항에 따른 청약철회 등을 할 수 없습니다.<ol type="a"
-						id="11091be3-9863-4f35-aa12-0e69a7cd45c9" class="numbered-list" start="1">
-						<li>회원에게 책임 있는 사유로 재화 등이 멸실되거나 훼손된 경우</li>
-					</ol>
-					<ol type="a" id="dbc7bd20-1da8-4841-8c9a-64f524221fa5" class="numbered-list" start="2">
-						<li>회원이 재화를 사용 또는 일부 소비한 경우</li>
-					</ol>
-					<ol type="a" id="09ceb271-b18b-4b0d-b8a6-1960a6d54433" class="numbered-list" start="3">
-						<li>구매 즉시 사용되거나 적용되는 유료 콘텐츠</li>
-					</ol>
-					<ol type="a" id="3fc7315d-3a1c-49d7-8a02-53636c015ad2" class="numbered-list" start="4">
-						<li>추가혜택이 제공되는 경우에 그 추가 혜택이 사용된 콘텐츠</li>
-					</ol>
-					<ol type="a" id="25e6b580-12f1-4a52-b41a-c224d1ba6c9d" class="numbered-list" start="5">
-						<li>개봉행위를 사용으로 볼 수 있거나 개봉 시 효용이 결정되는 콘텐츠의 개봉행위가 있는 경우</li>
-					</ol>
-					<ol type="a" id="a299d371-0a59-4744-86f5-caaf46ab564a" class="numbered-list" start="6">
-						<li>그 밖에 거래의 안전을 위하여 법령으로 정하는 경우</li>
-					</ol>
-				</li>
-			</ol>
-			<ol type="1" id="d4d98fb4-ac56-4e12-9402-7eb57a1d7b64" class="numbered-list" start="3">
-				<li>회사는 2항 각 호의 규정에 따라 청약철회가 불가능한 콘텐츠의 경우에는 그 사실을 회원이 쉽게 알 수 있는 곳에 명확하게 표시하고, 해당 콘텐츠의 시험사용 상품을 제공(한시적
-					이용의 허용, 체험용 제공 등)하거나 이에 대한 제공이 곤란한 경우에는 콘텐츠에 관한 정보를 제공함으로써 회원의 청약철회의 권리행사가 방해받지 아니하도록 조치합니다. 만약 회사가
-					이러한 조치를 하지 아니한 경우에는 2항 각 호의 청약철회 제한사유에도 불구하고 회원은 청약철회를 할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="b100bcb7-fbd1-46c5-830b-1507d866f613" class="numbered-list" start="4">
-				<li>회원은 1항 내지 3항의 규정에도 불구하고 회사가 제공하는 유료 콘텐츠의 내용이 표시 또는 광고된 내용과 다르거나 계약 내용과 다르게 이행된 경우, 회원은 해당 유료 콘텐츠의
-					구매일로부터 3개월 이내에 청약철회가 가능합니다.</li>
-			</ol>
-			<ol type="1" id="e0d5e3b0-7285-4c5d-8ccb-f55e5dd9cd2d" class="numbered-list" start="5">
-				<li>회원이 청약철회를 할 경우 회사는 플랫폼사업자 또는 오픈마켓 사업자를 통해 구매내역을 확인합니다. 또한 회사는 회원의 정당한 철회 사유를 확인하기 위해 회원에게서 제공받은 정보를
-					통해 회원에게 연락할 수 있으며, 추가적인 증빙을 요구할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="c4b60563-2f78-4915-bc80-d99b6d48a90c" class="numbered-list" start="6">
-				<li>미성년자가 단말기에서 콘텐츠 구매계약을 체결하는 경우, 회사는 법정대리인의 동의가 없으면 미성년자 본인 또는 법정대리인이 그 계약을 취소할 수 있다는 내용을 고지하며, 미성년자가
-					법정대리인의 동의 없이 구매계약을 체결한 때에는 미성년자 본인 또는 법정대리인은 회사에 그 계약을 취소할 수 있습니다. 다만, 미성년자가 법정대리인이 범위를 정하여 처분을 허락한
-					재산으로 콘텐츠를 구매한 경우 또는 미성년자가 속임수로써 자기를 성년자로 믿게 하거나 법정대리인의 동의가 있는 것으로 믿게 한 경우에는 취소할 수 없습니다.</li>
-			</ol>
-			<ol type="1" id="df6bf553-5a75-45a8-b095-2abc1b53bed9" class="numbered-list" start="7">
-				<li>유료 콘텐츠 구매자가 미성년자인지 여부는 결제가 진행된 단말기, 결제 실행자 정보, 결제 수단 명의자 등의 근거 기록을 토대로 판단됩니다. 이를 위하여 회사는 필요에 따라 미성년자
-					및 법정대리인을 증명할 수 있는 서류 제출을 요구할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="91c5d4a8-65d3-4e3e-9337-21d9665a2b6d" class="numbered-list" start="8">
-				<li>회사가 회원에게 무료로 지급 경우에는 청약철회의 대상에서 제외됩니다.</li>
-			</ol>
-			<h3 id="3f6b3ca5-655b-4602-9e36-bbd301c38ad6" class="">제24조 청약철회 등의 효과</h3>
-			<ol type="1" id="f0ff4ed9-9f91-46b1-9877-41a099a39d31" class="numbered-list" start="1">
-				<li>“회원”이 청약철회를 한 경우 “회사”는 지체 없이 “회원”의 유료 “콘텐츠”를 회수 또는 삭제하고, 환급에 필요한 서류 등을 접수한 날로부터 3영업일 이내에 “오픈마켓”사업자에
-					대한 결제취소요청 등 환급에 필요한 절차를 개시합니다. 이 경우 “회사”의 귀책사유로 환급이 지연될 경우 그 지연기간에 대하여 「전자상거래 등에서의 소비자보호에 관한 법률」 및
-					같은 법 시행령 제21조의3에서 정하는 이율(연 100분의 15)을 곱하여 산정한 지연이자를 지급합니다.</li>
-			</ol>
-			<ol type="1" id="f90dff5e-f086-4cd2-9384-1282ea955cad" class="numbered-list" start="2">
-				<li>회사는 결제대금을 환급함에 있어 회원이 신용카드나 그 밖에 “전자상거래 등에서의 소비자보호에 관한 법률 시행령”으로 정하는 결제수단으로 대금을 지급한 때에는 지체 없이 당해
-					결제수단을 제공한 사업자로 하여금 결제대금의 청구를 정지 또는 취소하도록 요청합니다. 다만 회사가 결제업자로부터 이미 대금을 지급받은 때에는 이를 결제업자에게 환급하고 이를
-					소비자에게 통지합니다.</li>
-			</ol>
-			<ol type="1" id="5111a043-74b5-4d9e-a147-0425aa1ad175" class="numbered-list" start="3">
-				<li>회사는 아이템 등이 일부 사용되거나 소비된 경우에는 회원이 얻은 이익 또는 해당 아이템 등의 공급에 든 비용에 상당하는 금액을 회원에게 청구할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="d592141e-2f54-4a62-acf0-13a1f41978df" class="numbered-list" start="4">
-				<li>회사는 필요한 경우 회원에게 환급에 필요한 서류를 요구할 수 있으며, 회원이 이를 거부할 경우에는 환급이 제한될 수 있습니다.</li>
-			</ol>
-			<h3 id="7e1cd520-c408-42b2-8e69-a745c9d23dda" class="">제25조 과오납금의 환급</h3>
-			<ol type="1" id="786bb3f6-863e-49d0-bcb8-5ecaec956535" class="numbered-list" start="1">
-				<li>“회사”는 과오납금이 발생하는 경우 과오납금을 “회원”에게 환급합니다. 다만, 과오납금이 “회사”의 고의 또는 과실 없이 “회원”의 과실로 인하여 발생한 경우에는 그 환급에
-					소요되는 실제 비용은 합리적인 범위 내에서 “회원”이 부담합니다.</li>
-			</ol>
-			<ol type="1" id="606f87f2-e316-4a27-b25b-f710ebc30d30" class="numbered-list" start="2">
-				<li>애플리케이션을 통한 결제는 오픈마켓 사업자가 제공하는 결제방식에 따르며, 결제 과정에서 과오납금이 발생하는 경우, 회사 또는 오픈마켓 사업자에게 환급을 요청하여야 합니다.</li>
-			</ol>
-			<ol type="1" id="ea5b9506-91d6-4875-9be7-ee4837674d12" class="numbered-list" start="3">
-				<li>애플리케이션의 다운로드 또는 네트워크 서비스의 이용으로 인해 발생한 통신요금(통화료, 데이터 통화료 등)은 환급 대상에서 제외될 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="7aeb876f-27f2-4933-9b9e-651b60e801ce" class="numbered-list" start="4">
-				<li>환급은 서비스를 이용하고 있는 단말기의 운영체제 종류에 따라 각 오픈마켓 사업자 또는 회사의 환급정책에 따라 진행됩니다.</li>
-			</ol>
-			<ol type="1" id="f4f6d5ed-92a5-406c-b0ab-9f5be7149908" class="numbered-list" start="5">
-				<li>회사는 과오납금의 환급을 처리하기 위해 회원에게서 제공받은 정보를 통해 회원에게 연락할 수 있으며, 필요한 정보의 제공을 요청할 수 있습니다. 회사는 회원으로부터 환급에 필요한
-					정보를 받은 날부터 3영업일 이내에 환급합니다.</li>
-			</ol>
-			<ol type="1" id="30de9af3-2a4f-4dc3-a63e-2d4576adc206" class="numbered-list" start="6">
-				<li>회사는 회원이 주장하는 과오금에 대해 환불을 거부할 경우에 정당하게 이용대금이 부과되었음을 입증할 책임을 집니다.</li>
-			</ol>
-			<h3 id="9703be51-8c3b-4a60-b456-1bc4032f6e5a" class="">제26조 회원의 해제 및 해지</h3>
-			<ol type="1" id="682f9fe4-4d10-422b-b6d4-ffa8ed192431" class="numbered-list" start="1">
-				<li>“회원”은 언제든지 서비스 이용을 원하지 않는 경우 회원탈퇴 절차를 통하여 회원탈퇴를 할 수 있습니다. 회원탈퇴로 인해 “회원”이 “서비스” 내에서 보유한 이용정보는 모두 삭제되어
-					복구가 불가능하게 됩니다.</li>
-			</ol>
-			<ol type="1" id="f6bc79a5-46c2-46d1-b2ea-ceeeea5567a8" class="numbered-list" start="2">
-				<li>회사는 회원이 이 약관 및 그에 따른 운영정책, 서비스 정책에서 금지하는 행위를 하는 등 본 계약을 유지할 수 없는 중대한 사유가 있는 경우에는 기간을 정하여 서비스 이용을
-					중지하거나 이용계약을 해지할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="8a4fdf88-dabb-4eaa-b7cc-fcf71e532943" class="numbered-list" start="3">
-				<li>회원이 회원탈퇴를 신청한 경우 회사는 회원 본인 여부를 확인할 수 있으며, 해당 회원이 본인으로 확인되는 경우 회원의 신청에 따른 조치를 취합니다.</li>
-			</ol>
-			<ol type="1" id="326e4f2c-5cf6-49ab-95eb-30d2c6cf5e52" class="numbered-list" start="4">
-				<li>회사는 최근의 서비스 이용일부터 연속하여 1년 동안 회사의 서비스를 이용하지 않은 휴면계정의 개인정보를 보호하기 위해 이용계약을 해지하고 회원의 개인정보 파기 등의 조치를 취할 수
-					있습니다. 이 경우 조치일 30일 전까지 계약해지, 개인정보 파기 등의 조치가 취해진다는 사실 및 파기될 개인정보 등을 회원에게 통지합니다.</li>
-			</ol>
-			<h3 id="a004d1fc-a94f-4ad0-b809-57a5864edc36" class="">제27조 손해배상</h3>
-			<ol type="1" id="8fb79347-5d2e-4186-a384-00295365c8c0" class="numbered-list" start="1">
-				<li>“회사” 또는 “회원”은 본 약관을 위반하여 상대방에게 손해를 입힌 경우에는 그 손해를 배상할 책임이 있습니다. 다만, 고의 또는 과실이 없는 경우에는 그러하지 아니 합니다
-				</li>
-			</ol>
-			<ol type="1" id="746b543a-3dc7-4c00-bab2-8d3ef96269d3" class="numbered-list" start="2">
-				<li>회사가 개별서비스 제공자와 제휴 계약을 맺고 회원에게 개별서비스를 제공하는 경우에 회원이 이 개별서비스 이용약관에 동의를 한 뒤 개별서비스 제공자의 고의 또는 과실로 인해 회원에게
-					손해가 발생한 경우에 그 손해에 대해서는 개별서비스 제공자가 책임을 집니다.</li>
-			</ol>
-			<h3 id="9f8a5a76-8e80-431b-adb9-1d1d731bb710" class="">제28조 회사의 면책</h3>
-			<ol type="1" id="e24b6aca-c2ee-40d2-a5b5-752b8d5c7ff6" class="numbered-list" start="1">
-				<li>“회사”는 천재지변 또는 이에 준하는 불가항력으로 인하여 “서비스”를 제공할 수 없는 경우에는 “서비스” 제공에 관하여 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="24653b9d-67ba-41c2-953d-c4287c766218" class="numbered-list" start="2">
-				<li>회사는 서비스용 설비의 보수, 교체, 정기점검, 공사 등 기타 이에 준하는 사유로 발생한 손해에 대하여 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는
-					그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="e6354056-9660-4875-a28e-635cccc8615c" class="numbered-list" start="3">
-				<li>회사는 회원의 고의 또는 과실로 인한 서비스 이용의 장애에 대하여는 책임을 지지 않습니다. 다만, 회원에게 부득이하거나 정당한 사유가 있는 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="4a3594a2-f466-41f7-8fd5-4cac244bba1c" class="numbered-list" start="4">
-				<li>회원이 서비스와 관련하여 게재한 정보나 자료 등의 신뢰성, 정확성 등에 대하여 회사는 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="1ab6261e-c230-458d-99a0-7de023f0be9a" class="numbered-list" start="5">
-				<li>회사는 회원이 다른 회원 또는 타인과 서비스를 매개로 발생한 거래나 분쟁에 대해 개입할 의무가 없으며, 이로 인한 손해에 대해 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="b7ea6594-d6dc-4828-b1e7-10f31b413cc9" class="numbered-list" start="6">
-				<li>회사는 무료로 제공되는 서비스 이용과 관련하여 회원에게 발생한 손해에 대해서는 책임을 지지 않습니다. 그러나 회사의 고의 또는 중과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="dccda4a0-306f-475d-90cf-9a2d89afed65" class="numbered-list" start="7">
-				<li>회사는 회원이 서비스를 이용하여 기대하는 유료상품에 관한 결과를 얻지 못하거나 상실한 것에 대하여 책임을 지지 않으며, 서비스에 대한 취사선택 또는 이용으로 발생하는 손해 등에
-					대해서 회사의 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</li>
-			</ol>
-			<ol type="1" id="83d55369-4cbe-4fd5-9923-4c2a96986c92" class="numbered-list" start="8">
-				<li>회사는 회원의 등급, 아이템, 가상 재화 등의 손실에 대하여 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="63df626f-77c3-49a3-bbe2-25213bea90f8" class="numbered-list" start="9">
-				<li>회사는 회원이 계정 비밀번호, 단말기 비밀번호, 오픈마켓 사업자가 제공하는 비밀번호 등을 관리하지 않아 발생하는 제3자 결제에 대해 책임을 지지 않습니다. 다만, 회사의 고의 또는
-					과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="6057a08e-cdc1-4fff-adcc-bd17831f2110" class="numbered-list" start="10">
-				<li>회원이 단말기의 변경, 모바일 기기의 번호 변경, 운영체제(OS) 버전의 변경, 해외 로밍, 통신사 변경 등으로 인해 콘텐츠 전부나 일부의 기능을 이용할 수 없는 경우 회사는 이에
-					대해 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="21af4e55-130e-4809-beba-a316e114f7de" class="numbered-list" start="11">
-				<li>회원이 회사가 제공하는 콘텐츠나 계정정보를 삭제한 경우 회사는 이에 대해 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<ol type="1" id="a3dbfa30-b4b7-4e47-b242-936bec80639c" class="numbered-list" start="12">
-				<li>회사는 이용자가 서비스 이용으로 발생한 손해에 대해서는 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li>
-			</ol>
-			<h3 id="f34949e6-fef7-4ada-aa40-8214e67910cc" class="">제29조 회원에 대한 통지</h3>
-			<ol type="1" id="895e542c-bf5b-4612-a497-23e9811687fd" class="numbered-list" start="1">
-				<li>“회사”가 “회원”에게 통지를 하는 경우 “회원”이 지정한 전자우편주소, LMS/SMS, 알림 메시지(Push Notification) 등으로 할 수 있습니다.</li>
-			</ol>
-			<ol type="1" id="fb9d6d6d-be2d-470b-8d79-30c6e5f05018" class="numbered-list" start="2">
-				<li>회사는 회원전체에게 통지를 하는 경우 7일이상 회사의 서비스 내 또는 그 연결화면 등에 공지함으로써 1항의 통지에 갈음할 수 있습니다.</li>
-			</ol>
-			<h3 id="3be8e520-6d24-4724-a9cc-a29640ad1a20" class="">제30조 재판권 및 준거법</h3>
-			<p id="3cf62dd5-4795-4533-8e17-b08bfec9fec8" class="">이 약관은 대한민국 법률에 따라 규율되고 해석됩니다. “회사”와 “회원” 간에 발생한 분쟁으로
-				소송이 제기되는 경우에는 법령에 정한 절차에 따른 법원을 관할 법원으로 합니다.</p>
-			<h3 id="aa4caab0-b372-49ec-ab93-dabff6a61b9c" class="">제31조 회원의 고충처리 및 분쟁해결</h3>
-			<ol type="1" id="c85ca74a-0bce-4642-97b4-33baf908a924" class="numbered-list" start="1">
-				<li>“회사”는 “회원”의 편의를 고려하여 “회원”의 의견이나 불만을 제시하는 방법을 “회사”의 “서비스” 내 또는 그 연결화면에 안내합니다. “회사”는 이러한 “회원”의 의견이나
-					불만을 처리하기 위한 전담조직을 운영합니다.</li>
-			</ol>
-			<ol type="1" id="ee49b2f6-f5a3-4a7b-a262-d3cb3d6b379d" class="numbered-list" start="2">
-				<li>회사는 회원으로부터 제기되는 의견이나 불만이 정당하다고 객관적으로 인정될 경우에는 합리적인 기간 내에 이를 신속하게 처리합니다. 다만, 처리에 장기간이 소요되는 경우에는 회원에게
-					장기간이 소요되는 사유와 처리일정을 서비스내 또는 그 연결화면에 공지하거나 제27조에 따라 통지합니다.</li>
-			</ol>
-			<ol type="1" id="4ed72185-77e5-4494-85e7-12a2f60ec64c" class="numbered-list" start="3">
-				<li>회사와 회원 간에 분쟁이 발생하여 제3의 분쟁조정기관이 조정할 경우 회사는 이용제한 등 회원에게 조치한 사항을 성실히 증명하고, 조정기관의 조정에 따를 수 있습니다</li>
-			</ol>
-			<h3 id="f4e8258c-3b4f-49fb-b215-e7a5bcbd2f82" class="">부칙</h3>
-			<p id="5dd19105-13b2-478b-bce9-2fc9fa625fdd" class="">제1조 (시행일) 이 약관은 2021년 09월 17일부터 시행한다.</p>
-		</div>
-	</article>
-</body>
-
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>(주)프로젝트일삼삼일 서비스 이용약관</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1605a557-6dd8-4e07-855b-1aad444b62b3" class="page sans"><header><h1 class="page-title">(주)프로젝트일삼삼일 서비스 이용약관</h1></header><div class="page-body"><h3 id="7f2bba9d-e971-4f77-b699-b89dabe19dce" class="">제1조 목적</h3><p id="3d8cd209-bce7-4a55-94b7-d6e95c6b1c4e" class="">이 약관은 (주)프로젝트일삼삼일(이하 “회사”)가 제공하는 밥 먹었니 및 이와 관련된 제반 서비스(이하 “서비스”)의 이용과 관련하여 회사와 서비스 이용자(이하 “회원”)의 권리, 의무 및 책임 사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p><h3 id="5ad2915e-6019-4667-8aaa-3f605f5a2675" class="">제2조 용어의 정의</h3><ol type="1" id="410306c1-8108-4b41-94eb-52d5737c547e" class="numbered-list" start="1"><li>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<ol type="a" id="0bbdeb9d-4665-429d-84a3-1b04affee650" class="numbered-list" start="1"><li>“회사”라 함은 설치 각종 단말기를 통하여 서비스를 제공하는 사업자를 의미합니다.</li></ol><ol type="a" id="642ebcb0-77a3-4854-a1e3-e422c9fd6947" class="numbered-list" start="2"><li>“회원”이란 이 약관에 따라 이용계약을 체결하고, 회사가 제공하는 서비스를 이용하는 자를 의미합니다.</li></ol><ol type="a" id="33fd2865-84e2-4600-9f17-c26deea8836c" class="numbered-list" start="3"><li>“단말기”란 콘텐츠를 다운로드 받거나 설치하여 사용할 수 있는 기기로서, PC, 휴대폰, 스마트폰, 휴대정보단말기(PDA), 태블릿 등을 의미합니다.</li></ol><ol type="a" id="61987db8-1000-4a47-b267-ed6dd292cc28" class="numbered-list" start="4"><li>“계정정보”란 회원의 회원번호와 외부계정정보, 기기정보, 실명, 성별, 나이, 거주지, 프로필 사진 등 회원이 회사에 제공한 정보와 이용정보, 이용요금 결제 정보 등을 통칭합니다.</li></ol><ol type="a" id="94068d21-c534-4f96-9089-827a4039e152" class="numbered-list" start="5"><li>“콘텐츠”란 단말기로 이용할 수 있도록 회사가 서비스 제공과 관련하여 디지털 방식으로 제작한 유료 또는 무료의 내용물 일체(네트워크 서비스, 애플리케이션, 유료 재화, 아이템 등)를 의미합니다.</li></ol><ol type="a" id="13104046-8154-4afb-8d90-ac0f9bc9658d" class="numbered-list" start="6"><li>“오픈마켓”이란 단말기에서 콘텐츠를 설치하고 결제할 수 있도록 구축된 전자상거래 환경을 의미합니다.</li></ol><ol type="a" id="bce2a8df-cee7-449c-b3d0-3686e365eaf5" class="numbered-list" start="7"><li>“애플리케이션”이란 회사가 제공하는 서비스를 이용하기 위하여 단말기를 통해 설치하여 사용하는 프로그램 일체를 의미합니다.</li></ol><ol type="a" id="cc5665ce-b883-49cd-ac88-106e84433d85" class="numbered-list" start="8"><li>“서비스”라 함은 회사의 웹/모바일 상의 사이트, 애플리케이션, 기타 플랫폼을 통해 회원에게 제공되는 서비스, 고객지원, 정보제공 기타 이에 부수하는 일체의 서비스를 말합니다.</li></ol><ol type="a" id="9cb5c5a5-533b-4b50-9fae-32584cbf6dd2" class="numbered-list" start="9"><li>“제휴서비스”라 함은 Facebook 등과 같은 소셜네트워크 서비스를 제공하는 자와의 제휴를 통하여 회원에게 서비스를 제공하는 것을 말합니다.</li></ol><ol type="a" id="77b6e781-d6be-4216-bc9d-1d774ad66d40" class="numbered-list" start="10"><li>“이용자”란 회사와 이용계약을 체결하기 전 서비스를 이용하고자 하는 자를 의미합니다.</li></ol><ol type="a" id="a6033c2e-9905-4203-8444-64b1961c645f" class="numbered-list" start="11"><li>“그룹”이라 함은 서로 간의 계정이 연동된 회원 조합을 의미합니다.</li></ol><ol type="a" id="2814e11d-4619-4d8a-a14c-b63459692554" class="numbered-list" start="12"><li>“게시물”이라 함은 회원이 서비스를 이용함에 있어 서비스상에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.</li></ol></li></ol><ol type="1" id="b189b12e-1df6-4684-b269-a6ddd9e12e5c" class="numbered-list" start="2"><li>이 약관에서 사용하는 용어의 정의는 본 조 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스별 정책에서 정하는 바에 의하며, 이에 정하지 아니한 것은 일반적인 상 관례에 따릅니다.</li></ol><h3 id="981553b7-96b9-4969-8492-7757538b8637" class="">제3조 약관의 효력 및 변경</h3><ol type="1" id="dfe4b56d-e04f-428f-b0d9-fec3fdc30a21" class="numbered-list" start="1"><li>“회사”는 “이용자”가 약관의 내용을 쉽게 알 수 있도록 작성하고 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회, 과오납금의 환급, 계약 해제 및 해지, 회사의 면책사항 및 회원에 대한 보상 등과 같은 중요한 내용을 회원이 쉽게 이해할 수 있도록 굵은 글씨 등으로 처리하여 표시합니다.</li></ol><ol type="1" id="1bc0fe8e-7748-4c3a-a5bc-ef29413669f2" class="numbered-list" start="2"><li>회사가 약관을 개정할 경우에는 적용일자 및 개정내용, 개정사유 등을 명시하여 최소한 그 적용일 7일 이전부터 서비스 내 또는 그 연결화면 등에 게시하여 회원에게 공지합니다. 다만, 변경된 내용이 회원에게 불리하거나 중대한 사항의 변경인 경우에는 그 적용일 30일 이전까지 본문과 같은 방법으로 공지하고 제29조 제1항의 방법으로 회원에게 통지합니다. 이 경우 개정 전 내용과 개정 후 내용을 명확하게 비교하여 회원이 알기 쉽도록 표시합니다.</li></ol><ol type="1" id="35061279-3464-440d-8560-ad8b3d69e5f0" class="numbered-list" start="3"><li>회사가 약관을 개정할 경우 개정약관 공지 후 개정약관의 적용에 대한 회원의 동의 여부를 확인합니다. 회사는 제2항의 공지 또는 통지를 할 경우 회원이 개정약관에 대해 동의 또는 거부의 의사표시를 하지 않으면 동의한 것으로 볼 수 있다는 내용도 함께 공지 또는 통지를 하며, 회원이 이 약관 시행일까지 거부의 의사표시를 하지 않는다면 개정약관에 동의한 것으로 볼 수 있습니다. 회원이 개정약관에 대해 동의하지 않는 경우 회사 또는 회원은 서비스 이용계약을 해지할 수 있습니다.</li></ol><ol type="1" id="2bc24f63-94ab-4cdd-acc3-acf69988ab24" class="numbered-list" start="4"><li>회사는 회원이 회사와 이 약관의 내용에 관하여 질의 및 응답을 할 수 있도록 조치를 취합니다.</li></ol><ol type="1" id="d76f0a51-1369-489d-9bd1-bbee42d9d72a" class="numbered-list" start="5"><li>회사는 「온라인 디지털콘텐츠산업 발전법」, 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「디지털콘텐츠이용자보호지침」, 「정보통신망이용촉진 및 정보보호 등에 관한 법률」, 「콘텐츠산업진흥법」 등 관련 법령에 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li></ol><h3 id="c799244f-389c-4c54-966a-91b47dcb01f5" class="">제4조 이용계약의 체결 및 적용</h3><ol type="1" id="296471dd-88d1-452e-aaed-b33c6d8fa4c4" class="numbered-list" start="1"><li>이용계약은 “이용자”가 이 약관의 내용에 대하여 동의를 한 다음 서비스 이용 신청을 하고, 회사가 그 신청에 대해서 승낙함으로써 체결됩니다.</li></ol><ol type="1" id="66602701-7d12-4e80-9a15-02baeea74b9d" class="numbered-list" start="2"><li>회사는 이용자의 신청에 대하여 승낙함을 원칙으로 합니다. 다만, 회사는 다음 각 호의 어느 하나에 해당하는 이용 신청에 대해서는 승낙을 거절할 수 있습니다.<ol type="a" id="4d3ceb52-e0cd-47dd-b639-2d6dcefb94f2" class="numbered-list" start="1"><li>이용신청서 내용을 허위로 기재하거나 이용신청 요건을 충족하지 못한 경우</li></ol><ol type="a" id="b0d03fcc-20f8-47e1-a563-6cfe7e60940f" class="numbered-list" start="2"><li>회사가 서비스를 제공하지 않은 국가에서 비정상적이거나 우회적인 방법을 통해 서비스를 이용하려고 신청하는 경우</li></ol><ol type="a" id="199385b8-c609-4310-ada0-305b567ba0f3" class="numbered-list" start="3"><li>관련 법령에서 금지하는 행위를 할 목적으로 신청 하는 경우</li></ol><ol type="a" id="2305e9cf-faaf-49fe-bf9c-05bfd8034347" class="numbered-list" start="4"><li>사회의 안녕과 질서 또는 미풍양속을 저해할 목적으로 신청한 경우</li></ol><ol type="a" id="96f436b2-f83a-487b-92c4-9b7cea760556" class="numbered-list" start="5"><li>부정한 용도로 서비스를 이용하고자 하는 경우</li></ol><ol type="a" id="6491b1b1-c036-4d5b-9917-1e8c3e01e002" class="numbered-list" start="6"><li>영리를 추구할 목적으로 서비스를 이용하고자 하는 경우</li></ol><ol type="a" id="2910d723-871f-4179-b20d-414a7a797995" class="numbered-list" start="7"><li>만 14세 미만 아동이 법정대리인의 동의를 얻지 아니한 경우</li></ol><ol type="a" id="75c57bb6-1cbb-4711-b1ce-41ee4c6a6315" class="numbered-list" start="8"><li>그 밖에 각 호에 준하는 사유로서 승낙이 부적절하다고 판단되는 경우</li></ol></li></ol><ol type="1" id="86151c9c-60b7-4678-8563-7299e8c97092" class="numbered-list" start="3"><li>회사는 다음 각 호의 어느 하나에 해당하는 경우 그 사유가 해소될 때까지 승낙을 유보할 수 있습니다.<ol type="a" id="cbcdc52a-4569-45f1-b83a-ca50fa9d4fbd" class="numbered-list" start="1"><li>회사의 설비에 여유가 없거나, 특정 단말기의 지원이 어렵거나, 기술적 장애가 있는 경우</li></ol><ol type="a" id="f72f3f67-7be1-4c96-85f9-8386dcfcd51c" class="numbered-list" start="2"><li>서비스 상의 장애 또는 서비스 이용요금, 결제수단의 장애가 발생한 경우</li></ol><ol type="a" id="72a45c8f-4014-4646-a690-f27d8f61aef6" class="numbered-list" start="3"><li>그 밖의 각 호에 준하는 사유로서 이용신청의 즉각적인 승낙이 어렵다고 판단되는 경우</li></ol></li></ol><h3 id="d3e5c31e-be65-4e92-8607-0633f6c685cb" class="">제5조 미성년자의 회원가입에 관한 특칙</h3><ol type="1" id="d184a7ac-4246-4473-bbc0-913a81d542ec" class="numbered-list" start="1"><li>만 14세 미만의 “이용자”는 이용약관 및 개인정보처리방침에 대하여 충분히 숙지하고 부모 등 법정대리인의 동의를 얻은 후에 이용계약 체결(회원가입을 신청)을 하고 본인의 개인정보를 제공하여야 합니다.</li></ol><ol type="1" id="1981498c-3abf-48a1-b95d-23478c616c07" class="numbered-list" start="2"><li>회사는 부모 등 법정대리인의 동의에 대한 확인절차를 거치지 않은 14세 미만 이용자에 대하여는 가입을 취소 또는 불허합니다.</li></ol><ol type="1" id="89691997-7f16-4b0f-b606-453d058f9f3b" class="numbered-list" start="3"><li>만 14세 미만 이용자” 부모 등 법정대리인은 아동에 대한 개인정보의 열람, 정정, 갱신을 요청하거나 회원가입에 대한 동의를 철회할 수 있으며, 이러한 경우에 회사는 지체 없이 필요한 조치를 취해야 합니다.&quot;</li></ol><h3 id="c447301f-0d1b-46b7-a4ab-8b7730c498e9" class="">제6조 약관 외 준칙</h3><p id="94824ad0-6358-4022-87d9-f3cd66a4b4f1" class="">이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 「전자상거래 등에서의 소비자보호에 관한 법률」,「약관의 규제에 관한 법률」, ,「정보통신망이용촉진 및 정보보호 등에 관한 법률」,「콘텐츠산업진흥법」 등 관련 법령 또는 상 관례에 따릅니다.</p><h3 id="86af0a5c-e985-465e-a781-21aeb46e8508" class="">제7조 운영정책</h3><ol type="1" id="2322d821-9196-447b-809f-ebeb471dc812" class="numbered-list" start="1"><li>약관을 적용하기 위하여 필요한 사항과 약관에서 구체적 범위를 정하여 위임한 사항을 서비스 운영정책(이하 “운영정책”이라 합니다)으로 정할 수 있습니다. 이 경우 “운영정책” 등은 본 약관에 대한 동일한 효력을 갖습니다.</li></ol><ol type="1" id="32ad3502-3b59-43a3-bda4-e1e916257943" class="numbered-list" start="2"><li>운영정책은 본 약관 내용의 일부로서 회원은 본 약관에 동의하는 것으로 운영정책에도 동의하는 것입니다.</li></ol><h3 id="e56428bb-1f7a-4dda-9231-609234deee57" class="">제8조 개인정보의 보호 및 관리</h3><ol type="1" id="2a7ada34-fa7d-4f6d-8b61-addb844ad6f2" class="numbered-list" start="1"><li>“회사”는 관련 법령이 정하는 바에 따라 “회원”의 개인정보를 보호하기 위해 노력하며, 개인정보의 보호 및 사용에 대해서는 관련 법령 및 회사의 개인정보 처리방침에 따릅니다. 다만, 회사가 제공하는 “서비스” 이외의 링크된 서비스에서는 회사의 개인정보 처리방침이 적용되지 않습니다.</li></ol><ol type="1" id="c8336918-0415-4728-820d-9ecd9326d3ee" class="numbered-list" start="2"><li>회사는 관련 법령에 의해 관련 국가기관 등의 요청이 있는 경우를 제외하고는 회원의 개인정보를 본인의 동의 없이 타인에게 제공하지 않습니다.</li></ol><ol type="1" id="688edb31-d337-4f28-85da-6b785fa618a5" class="numbered-list" start="3"><li>회사는 회원의 귀책사유로 개인정보가 유출되어 발생한 피해에 대하여 책임을 지지 않습니다. 다만, 회사의 귀책사유로 인한 경우에는 그러하지 않습니다.</li></ol><ol type="1" id="b83bd640-05f0-4d57-99d6-e1fc36f8dd2f" class="numbered-list" start="4"><li>회사는 회원의 개인정보보호를 위하여 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」상 개인정보 유효기간 제도에 따라 마지막 접속일로부터 1년간 접속이력이 없는 회원의 개인정보를 파기 또는 분리하여 별도로 저장 관리하며, 이에 따라 1년간 접속 이력이 없는 회원의 계정은 휴면계정으로 처리되어 회원의 별도 요청이 없는 한 사용이 제한됩니다. 다만, 회원이 회사가 정한 절차에 따라 개인정보의 유효기간을 달리 설정하는 경우, 회사는 설정된 기간에 따라 회원의 계정을 휴면계정으로 처리합니다.</li></ol><h3 id="95bdf976-4658-4568-894f-93a6c8f4fc8b" class="">제9조 회사의 의무</h3><ol type="1" id="124a199c-8aa2-425d-87dc-b68f371409ff" class="numbered-list" start="1"><li>“회사”는 관련 법령, 이 약관에서 정하는 권리의 행사 및 의무의 이행을 신의에 따라 성실하게 준수합니다.</li></ol><ol type="1" id="73e9d7f4-6071-407b-a930-f893911ade41" class="numbered-list" start="2"><li>회사는 회원이 안전하게 서비스를 이용할 수 있도록 개인정보(신용정보 포함)보호를 위해 보안시스템을 갖추어야 하며 개인정보 처리방침을 공시하고 준수합니다. 회사는 이 약관 및 개인정보 처리방침에서 정한 경우를 제외하고는 회원의 개인정보가 제3자에게 공개 또는 제공되지 않도록 합니다.</li></ol><ol type="1" id="2a280be4-80cc-40be-88ad-7e636fedf06c" class="numbered-list" start="3"><li>회사는 계속적이고 안정적인 서비스의 제공을 위하여 서비스 개선을 하던 중 설비에 장애가 생기거나 데이터 등이 멸실․훼손된 때에는 천재지변, 비상사태, 현재의 기술로는 해결이 불가능한 장애나 결함 등 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구하도록 최선의 노력을 다합니다.</li></ol><h3 id="81d17ce1-b5dd-4dfb-8352-f3a7ab49fab3" class="">제10조 회원의 의무</h3><ol type="1" id="9ebc8349-bf9b-450f-b45e-64089d0ee4a0" class="numbered-list" start="1"><li>“회원”은 “회사”에서 제공하는 “서비스”의 이용과 관련하여 다음 각 호에 해당하는 행위를 해서는 안 됩니다.<ol type="a" id="82d1658e-ddb9-4e73-adf0-0f04b535a2a8" class="numbered-list" start="1"><li>이용신청 또는 회원 정보 변경 시 허위사실을 기재하는 행위</li></ol><ol type="a" id="a085d57a-dc40-4c82-be75-81717c048bdc" class="numbered-list" start="2"><li>회사가 제공하지 않는 서비스나 비정상적인 방법을 통해 사이버 자산(ID, 아이템, 가상 재화 등)을 매매 또는 증여하거나, 이를 취득하여 이용하는 행위</li></ol><ol type="a" id="f51c519f-29f3-4e99-ba71-41a476b01034" class="numbered-list" start="3"><li>회사의 직원이나 운영자를 가장하거나 타인의 명의를 도용하여 글을 게시하거나 메일을 발송하는 행위, 타인으로 가장하거나 타인과의 관계를 허위로 명시하는 행위</li></ol><ol type="a" id="233eb3a0-ce93-4252-91ec-3b045871447e" class="numbered-list" start="4"><li>타인의 신용카드⋅유/무선 전화⋅은행 계좌 등을 도용하여 유료 콘텐츠를 구매하는 행위, 다른 회원의 ID 및 비밀번호를 부정 사용하는 행위</li></ol><ol type="a" id="bfd8701c-bebd-4380-82c8-00ed80a16fb4" class="numbered-list" start="5"><li>다른 회원의 개인정보를 무단으로 수집. 저장. 게시 또는 유포하는 행위</li></ol><ol type="a" id="7da327b1-6269-49fe-8bc6-33b6de66eda9" class="numbered-list" start="6"><li>도박 등 사행행위를 하거나 유도하는 행위, 음란⋅저속한 정보를 교류. 게재하거나 음란 사이트를 연결(링크)하는 행위, 수치심. 혐오감 또는 공포심을 일으키는 말. 소리. 글. 그림. 사진 또는 영상을 타인에게 전송 또는 유포하는 행위 등 서비스를 불건전하게 이용하는 행위</li></ol><ol type="a" id="84384d35-6f75-4288-9b1b-e5fb073ede92" class="numbered-list" start="7"><li>서비스를 무단으로 영리, 영업, 광고, 홍보, 정치활동, 선거운동 등 본래의 용도 이외의 용도로 이용하는 행위</li></ol><ol type="a" id="d7b6c9fb-b087-410e-abdc-7b99375ddc30" class="numbered-list" start="8"><li>회사의 서비스를 이용하여 얻은 정보를 무단으로 복제. 유통. 조장하거나 상업적으로 이용하는 행위, 알려지거나 알려지지 않은 버그를 악용하여 서비스를 이용하는 행위</li></ol><ol type="a" id="dd86790b-06a4-48bd-9d74-b456b3a3c94b" class="numbered-list" start="9"><li>타인을 기망하여 이득을 취하는 행위, 회사의 서비스의 이용과 관련하여 타인에게 피해를 입히는 행위</li></ol><ol type="a" id="6ebfaabf-91db-434e-9dd9-c6b35a12f93a" class="numbered-list" start="10"><li>회사나 타인의 지적재산권 또는 초상권을 침해하는 행위, 타인의 명예를 훼손하거나 손해를 가하는 행위</li></ol><ol type="a" id="051a2aba-ddff-4b72-b234-feb9d7f3bc07" class="numbered-list" start="11"><li>법령에 의하여 전송 또는 게시가 금지된 정보(컴퓨터 프로그램)나 컴퓨터 소프트웨어, 하드웨어 또는 전기통신장비의 정상적인 작동을 방해, 파괴할 목적으로 고안된 바이러스, 컴퓨터 코드, 파일 및 프로그램 등을 고의로 전송. 게시. 유포 또는 사용하는 행위</li></ol><ol type="a" id="d76e2949-7849-40e1-a773-02748c23c000" class="numbered-list" start="12"><li>회사로부터 특별한 권리를 부여 받지 않고 애플리케이션을 변경하거나, 애플리케이션에 다른 프로그램을 추가. 삽입하거나, 서버를 해킹. 역설계 하거나, 소스 코드나 애플리케이션 데이터를 유출. 변경하거나, 별도의 서버를 구축하거나, 웹사이트의 일부분을 임의로 변경 및 도용하여 회사를 사칭하는 행위</li></ol><ol type="a" id="e2319771-ca1d-4b65-8556-81669431807c" class="numbered-list" start="13"><li>그 밖에 관련 법령에 위반되거나 선량한 풍속 기타 사회통념에 반하는 행위</li></ol></li></ol><ol type="1" id="462825cd-f7da-4ef7-b05d-1d95048ca526" class="numbered-list" start="2"><li>회원의 계정 및 단말기에 관한 관리 책임은 회원에게 있으며, 이를 타인이 이용하도록 하게 하여서는 안 됩니다. 단말기의 관리 부실이나 타인에게 이용을 승낙함으로 인해 발생하는 손해에 대해서 회사는 책임을 지지 않습니다.</li></ol><ol type="1" id="7a8b65f0-ed6e-4895-a547-1f1aa385e105" class="numbered-list" start="3"><li>회원은 각 오픈마켓에서 부정한 결제가 이루어지지 아니하도록 결제 비밀번호 기능을 설정하고 관리하여야 합니다. 회원의 부주의로 인하여 발생하는 손해에 대해 회사는 책임지지 않습니다</li></ol><ol type="1" id="f7f8a1b3-07f8-48b5-9f29-8cfbb7e726d0" class="numbered-list" start="4"><li>회사는 다음 각 호의 행위의 구체적인 내용을 정할 수 있으며, 회원은 이를 따라야 합니다.<ol type="a" id="2231318b-87c6-437d-b00a-6027c8d3618a" class="numbered-list" start="1"><li>회원의 계정명</li></ol><ol type="a" id="58801a46-530d-4776-9e8c-36b4e835a401" class="numbered-list" start="2"><li>그룹명 및 채팅내용과 방법</li></ol><ol type="a" id="c101fc26-bec1-4146-bcda-09054d9db379" class="numbered-list" start="3"><li>게시판이용 및 서비스이용 방법</li></ol><ol type="a" id="c84b5482-adc2-4671-9a6a-a33013b9a7b1" class="numbered-list" start="4"><li>애플, 구글 등 외부 모바일 플랫폼 제휴 서비스 정책</li></ol></li></ol><h3 id="ac6fd9af-3019-4ff9-b7c3-5b6cee6fc783" class="">제11조 서비스의 제공</h3><ol type="1" id="2d69b1e8-cf4f-4fab-b1a4-259eff87bfb7" class="numbered-list" start="1"><li>“회사”는 본 약관 제4조의 규정에 따라 이용계약이 완료된 “회원”에게 그 즉시 “서비스”를 이용할 수 있도록 합니다. 다만, 일부 서비스의 경우 회사의 필요에 따라 지정된 일자부터 서비스를 개시할 수 있습니다.</li></ol><ol type="1" id="a847b651-9de4-47ff-88ad-c10f7a5b1fd3" class="numbered-list" start="2"><li>회사는 회원에게 서비스를 제공할 때 이 약관에 정하고 있는 서비스를 포함하여 기타 부가적인 서비스를 함께 제공할 수 있습니다.</li></ol><ol type="1" id="e869ae3c-fe2d-49db-8ff7-745a451f9a5c" class="numbered-list" start="3"><li>회사는 회원의 등급을 구분하고 이용시간, 이용횟수, 제공 서비스의 범위 등을 세분화하여 이용에 차등을 둘 수 있습니다.</li></ol><h3 id="dba1ea8c-dde0-45bc-ba37-917d4cede068" class="">제12조 서비스의 이용</h3><ol type="1" id="3cc26a95-bfd8-4040-9538-de3df0034c95" class="numbered-list" start="1"><li>“서비스”는 “회사”의 영업방침에 따라 정해진 시간 동안 제공합니다. (별도의 안내가 없는 경우 연중무휴 1일 24시간 제공하는 것을 원칙으로 합니다) 단, 관련법령에서 정하는 바에 따라 서비스 제공시간 등에 제한을 두어야 하는 경우, 회사는 별도의 사전 공지 없이 서비스의 제공시간을 제한 또는 변경 할 수 있으며 이에 대하여 어떠한 책임도 부담하지 않습니다.</li></ol><ol type="1" id="35fbfdde-f866-4bf9-8a33-3a11cd77c0fd" class="numbered-list" start="2"><li>제1항에도 불구하고 회사는 다음 각 호의 경우에는 주 단위 또는 월 단위로 일정 시간을 정하여 서비스의 전부 또는 일부를 일시 정지할 수 있습니다. 이 경우 회사는 사전에 그 정지의 사유와 기간을 서비스 공지사항 등에 공지합니다. 다만, 사전에 공지할 수 없는 부득이한 사정이 있는 경우 사후에 공지할 수 있습니다.<ol type="a" id="66685557-7796-4b52-b8da-f12b88e3e59a" class="numbered-list" start="1"><li>컴퓨터 등 정보통신설비의 보수점검, 교체, 정기점검 또는 서비스의 내용 수정을 위하여 필요한 경우</li></ol><ol type="a" id="6d8e80be-a5dc-4a58-b20c-675863ce5e38" class="numbered-list" start="2"><li>해킹 등의 전자적 침해사고, 통신사고, 회원들의 비정상적인 이용행태, 미처 예상하지 못한 서비스의 불안정성에 대응하기 위하여 필요한 경우</li></ol><ol type="a" id="ec3ad311-892c-4bcb-9382-be121bd8bfe8" class="numbered-list" start="3"><li>관련 법령에서 특정 시간 또는 방법으로 서비스 제공을 금지하는 경우</li></ol><ol type="a" id="0dd5de48-f3f6-4a28-998d-df2cbe5512b9" class="numbered-list" start="4"><li>천재지변, 비상사태, 정전, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 정상적인 서비스 제공이 불가능할 경우</li></ol><ol type="a" id="f492050b-5293-4de6-85b5-bfdd617f4382" class="numbered-list" start="5"><li>회사의 분할, 합병, 영업양도, 영업의 폐지, 당해 서비스의 수익 악화 등 회사의 경영상 중대한 필요에 의한 경우</li></ol><ol type="a" id="05524c55-af7f-401f-9bcd-168df3fbe031" class="numbered-list" start="6"><li>그 밖의 각 호에 준하는 사유로서 서비스의 전부 또는 일부를 정지해야 된다고 판단되는 경우</li></ol></li></ol><ol type="1" id="b793adab-f0f8-44f0-974a-9ac597205321" class="numbered-list" start="3"><li>회사는 단말기를 위한 전용 애플리케이션 또는 네트워크를 이용하여 서비스를 제공합니다. 회원은 애플리케이션을 다운로드하여 설치하거나 네트워크를 이용하여 무료 또는 유료로 서비스를 이용할 수 있습니다.</li></ol><ol type="1" id="97bc2881-c8f2-4c1c-bfff-d87dd7c682ed" class="numbered-list" start="4"><li>유료 콘텐츠의 경우에는 해당 서비스에 명시된 요금을 지급하여야 이용할 수 있습니다. 네트워크를 통해 애플리케이션을 다운로드 하거나 서비스를 이용하는 경우에는 가입한 이동통신사에서 정한 별도의 요금이 발생할 수 있습니다.</li></ol><ol type="1" id="d723f8ec-88c6-4c3a-a8bd-c870cde14c45" class="numbered-list" start="5"><li>다운로드 하여 설치한 애플리케이션 또는 네트워크를 통해 이용하는 서비스의 경우에는 단말기 또는 이동통신사의 특성에 맞도록 제공됩니다. 단말기의 변경, 모바일 기기의 번호 변경 또는 해외 로밍의 경우에는 콘텐츠의 전부 또는 일부의 이용이 불가능할 수 있으며, 이 경우 회사는 책임을 지지 않습니다.</li></ol><ol type="1" id="c1548bec-8302-422f-bb8d-37ed7a22314b" class="numbered-list" start="6"><li>다운로드하여 설치한 애플리케이션 또는 네트워크를 통해 이용하는 서비스의 경우에는 백그라운드 작업이 진행될 수 있습니다. 이 경우 단말기 또는 이동통신사의 특성에 맞도록 추가요금이 발생할 수 있으며 이와 관련하여 회사는 책임을 지지 않습니다.</li></ol><h3 id="32a672fd-85d0-44d3-b6de-4122994967cc" class="">제13조 서비스의 변경 및 중단</h3><ol type="1" id="084642c0-e2bc-4e7c-9b55-cf33d99cb22b" class="numbered-list" start="1"><li>“회사”는 원활한 서비스 제공을 위해 운영상 또는 기술상의 필요에 따라 “서비스”를 변경할 수 있으며, 변경 전에 해당 내용을 “서비스” 공지사항 등에 공지합니다. 다만, 버그 및 오류 등의 수정이나 긴급 업데이트 등 부득이하게 변경할 필요가 있는 경우 또는 중대한 변경에 해당하지 않는 경우에는 사후에 공지할 수 있습니다.</li></ol><ol type="1" id="224eb051-3ca8-41a7-adc2-044d80078228" class="numbered-list" start="2"><li>회사는 무료로 제공되는 서비스의 일부 또는 전부를 회사의 정책 및 운영 필요성에 의하여 수정, 중단, 변경할 수 있습니다. 이에 대하여 관계 법령에 특별한 규정이 없는 한 회사는 회원에게 기대수익의 상실, 회사가 직접 제공하지 않은 수익의 상실 또는 기타 무료로 제공된 서비스의 수정, 중단, 변경 등으로 발생하는 손해에 대하여 별도의 보상을 하지 않습니다.</li></ol><ol type="1" id="ea2c453c-0bec-4ab5-8287-2645b37f8a6a" class="numbered-list" start="3"><li>회사가 기술 상 경영 상의 사유로 서비스를 영구적으로 종료하는 경우, 해당 서비스의 종료에 관한 사실을 30일 전부터 홈페이지 또는 서비스 내에 공지한 후 종료합니다. 사전에 통지할 수 없는 부득이한 사정이 있는 경우에는 사후에 통지를 할 수 있습니다.</li></ol><ol type="1" id="90b7d8ba-9e77-4d55-839f-2f419950f775" class="numbered-list" start="4"><li>제3항에 따라 서비스가 종료되는 경우 회사는 사용하지 않았거나 사용기간이 남아 있는 유료 콘텐츠에 대해 제24조에 따라 환급합니다.</li></ol><h3 id="8f581d28-c7f7-43a9-9694-2eb1b6a3ab1e" class="">제14조 정보의 수집 등</h3><ol type="1" id="29220946-d797-47f7-bbad-d93fa4c08484" class="numbered-list" start="1"><li>“회사”는 “회원”간에 이루어지는 “게시물”을 저장 및 보관할 수 있으며 이 정보는 “회사”만이 보유합니다. 회사는 회원간의 분쟁 조정, 민원 처리 또는 질서의 유지를 위한 경우에 한하여, 제3자는 법령에 따라 권한이 부여된 경우에 한하여 이 정보를 열람할 수 있습니다.</li></ol><ol type="1" id="bf660e0e-7165-42d7-849a-01507b13ddfc" class="numbered-list" start="2"><li>회사 또는 제3자가 1항에 따라 채팅 정보를 열람할 경우 회사는 사전에 열람의 사유 및 범위를 해당 회원에게 고지합니다. 다만, 제10조 1항에 따른 금지행위의 조사, 처리, 확인 또는 그 행위로 인한 피해 구제와 관련하여 이 정보를 열람해야 할 경우에는 사후에 고지할 수 있습니다.</li></ol><ol type="1" id="3f6bbed9-912f-455a-ac14-0fd16f35a809" class="numbered-list" start="3"><li>회사는 서비스의 원활하고 안정적인 운영 및 서비스 품질의 개선을 위하여 회원의 개인정보를 제외한 회원의 단말기 정보(설정, 사양, 운영체제, 버전 등)를 수집 및 활용할 수 있습니다.</li></ol><ol type="1" id="1019cca4-310e-4d62-82c5-0f8224bd22d2" class="numbered-list" start="4"><li>회사는 서비스 개선 및 회원 대상 서비스 소개 등을 위한 목적으로 회원에게 추가정보를 요청할 수 있습니다. 이 요청에 대해 회원은 승낙하거나 거절할 수 있으며, 회사가 이 요청을 할 경우에는 회원이 이 요청을 거절할 수 있다는 뜻을 함께 고지합니다.</li></ol><h3 id="6ef83583-b144-4b64-a23c-cd13eebe325b" class="">제15조 광고의 제공</h3><ol type="1" id="70848ac8-14ae-4070-8de5-317d3f65ce82" class="numbered-list" start="1"><li>“회사”는 “서비스”의 운영과 관련하여 “서비스” 내에 광고를 게재할 수 있습니다. 또한 수신에 동의한 “회원”에 한하여 문자서비스(LMS/SMS), 푸시메시지(Push Notification) 등의 방법으로 광고성 정보를 전송할 수 있습니다. 이 경우 “회원”은 언제든지 수신을 거절할 수 있으며, “회사”는 “회원”의 수신 거절 시 광고성 정보를 발송하지 아니합니다.</li></ol><ol type="1" id="ffb7734c-89d5-4fe3-ae10-751a37d6a41c" class="numbered-list" start="2"><li>회사가 제공하는 서비스 중의 배너 또는 링크 등을 통해 타인이 제공하는 광고나 서비스에 연결될 수 있습니다.</li></ol><ol type="1" id="1341d720-88a1-414f-92fc-10a5f3eac36e" class="numbered-list" start="3"><li>제2항에 따라 타인이 제공하는 광고나 서비스에 연결될 경우 해당 영역에서 제공하는 서비스는 회사의 서비스 영역이 아니므로 회사가 신뢰성, 안정성 등을 보장하지 않으며, 그로 인한 회원의 손해에 대하여도 회사는 책임을 지지 않습니다. 다만, 회사가 고의 또는 중과실로 손해의 발생을 용이하게 하거나 손해 방지를 위한 조치를 취하지 아니한 경우에는 그러하지 아니합니다.</li></ol><h3 id="d6519085-ffed-4343-9cf6-6e3c76a1e2c1" class="">제16조 저작권 등의 귀속</h3><ol type="1" id="4fad0967-6423-458f-9606-37650b99cc95" class="numbered-list" start="1"><li>“회사”가 제작한 “서비스” 내의 “콘텐츠”에 대한 저작권과 기타 지적재산권은 회사에 귀속합니다. “회사”는 “콘텐츠”가 제3자의 저작권을 침해할 우려가 있는 경우 “회원”에게 별도의 공지없이 “콘텐츠”의 외관, 디자인, 성능을 변경할 수 있습니다.</li></ol><ol type="1" id="6b49a1a1-c777-42ff-9237-bdd74bd90dc4" class="numbered-list" start="2"><li>회원은 회사가 제공하는 서비스를 이용하여 얻은 정보 중에서 회사 또는 제공업체에 지적재산권이 귀속된 정보를 회사 또는 제공업체의 사전 동의 없이 복제 및 전송 등의 방법(편집, 공표, 공연, 배포, 방송, 2차적 저작물 작성 등을 포함합니다. 이하 같습니다)에 의하여 영리목적으로 이용하거나 타인에게 이용하게 하여서는 안 됩니다.</li></ol><ol type="1" id="1aa87b55-3178-4045-9d1a-016f547195f6" class="numbered-list" start="3"><li>회원은 애플리케이션 내에서 보여지거나 서비스와 관련하여 회사, 회원 또는 다른 이용자가 애플리케이션 또는 서비스를 통해 업로드 또는 전송하는 콘텐츠 또는 게시물에 대하여 다음과 같은 방법과 조건으로 이용하는 것을 허락합니다.<ol type="a" id="2b1749e7-7aec-48e2-939d-3acce504fd72" class="numbered-list" start="1"><li>해당 콘텐츠 또는 게시물를 이용, 편집 형식의 변경 및 기타 변형하는 것(공표, 복제, 공연, 전송, 배포, 방송, 2차적 저작물 작성 등 어떠한 형태로든 이용 가능하며, 이용기간과 지역에는 제한이 없음)</li></ol><ol type="a" id="3d20a417-8a52-46b0-a31e-040f7b638ddc" class="numbered-list" start="2"><li>이용자 콘텐츠를 제작한 이용자의 사전 동의 없이 거래를 목적으로 이용자 콘텐츠를 판매, 대여, 양도 행위를 하지 않음</li></ol></li></ol><ol type="1" id="f739803b-5c2a-4b39-b40f-3998cc5fc55c" class="numbered-list" start="4"><li>애플리케이션 내에서 보여지지 않고 서비스와 일체화되지 않은 회원의 이용자 콘텐츠(예컨대, 일반게시판 등에서의 게시물)에 대하여 회사는 회원의 명시적인 동의가 없이 이용하지 않으며, 회원은 언제든지 이러한 이용자 콘텐츠를 삭제할 수 있습니다.</li></ol><ol type="1" id="da8ce380-3df4-496c-aa5c-91c1b43d1e9c" class="numbered-list" start="5"><li>회사는 회원이 게시하거나 등록하는 서비스 내의 게시물에 대해 제10조 1항에 따른 금지행위에 해당된다고 판단되는 경우에는 사전 통지 없이 이를 삭제 또는 이동하거나 그 등록을 거절할 수 있습니다.</li></ol><ol type="1" id="7393310a-8a26-4dd8-99a9-5ec8f4ab7d06" class="numbered-list" start="6"><li>회사가 운영하는 게시판 등에 게시된 정보로 인하여 법률상 이익이 침해된 회원은 회사에 해당 정보의 삭제 또는 반박 내용의 게재를 요청할 수 있습니다. 이 경우 회사는 신속하게 필요한 조치를 취하고 이를 신청인에게 통지합니다.</li></ol><ol type="1" id="696af6c5-be44-4cfd-9810-dd6dcb3b7379" class="numbered-list" start="7"><li>본 조는 회사가 서비스를 운영하는 동안 유효하며, 회원 탈퇴 후에도 지속적으로 적용됩니다.</li></ol><ol type="1" id="33693fd3-c653-4c5c-91a9-ae8d702e8d92" class="numbered-list" start="8"><li>회원이 서비스 내에 게시한 사진, 메모 등의 게시물의 저작권은 서로 그룹으로 연결된 회원들에게 귀속됩니다.</li></ol><ol type="1" id="e9e76723-da32-4f35-a452-f651ca257107" class="numbered-list" start="9"><li>회원이 게재한 “게시물”로 인해 발생하는 손실이나 문제는 회원 개인의 책임이며 회사는 이에 대한 책임을 지지 않습니다.</li></ol><h3 id="28dfb127-b595-4ed6-a84d-092024ed9013" class="">제17조 게시물의 관리</h3><ol type="1" id="cfcdb04d-ddd9-42f8-ad01-a55856d0cfcc" class="numbered-list" start="1"><li>“회원”의 “게시물”이 관련법에 위반되는 내용을 포함하는 경우, 권리자는 관련법이 정한 절차에 따라 해당 “게시물”의 게시중단 및 삭제 등을 요청할 수 있으며, “회사”는 관련법에 따라 조치를 취하여야 합니다.</li></ol><ol type="1" id="63562330-d6b5-4cf9-aadc-e6b661a7b489" class="numbered-list" start="2"><li>회사는 1항에 따른 권리자의 요청이 없는 경우라도 권리침해가 인정될 만한 사유가 있거나 기타 회사 정책 및 관련법에 위반되는 경우에는 관련법에 따라 해당 게시물에 대해 임시조치 등을 취할 수 있습니다.</li></ol><ol type="1" id="96fd777f-7b16-43a1-95b2-321272bab9a9" class="numbered-list" start="3"><li>회사는 관계 법령 또는 이 약관의 준수 여부 등을 확인할 필요가 있을 때, 게시물의 내용을 확인할 수 있습니다.</li></ol><ol type="1" id="365b483f-1250-4dc4-bf9b-8068119beed3" class="numbered-list" start="4"><li>게시물 일부는 일정 기간 이후에는 서비스 상에서 삭제될 수 있으며, 게시물에 대한 관리 책임은 회원에게 있습니다. 회원의 게시물이 타인의 권리를 침해하였음을 이유로 타인으로부터 회사가 손해배상청구 등의 이의 제기를 받은 경우, 해당 게시물을 작성한 회원은 회사의 면책을 위하여 적극적으로 협조하여야 하며, 회사가 면책되지 못한 경우 회원은 그로 인해 발생한 문제에 대해 책임을 부담하여야 합니다.</li></ol><ol type="1" id="c11d6cb2-35d2-4227-bab2-d75cdccd331b" class="numbered-list" start="5"><li>회사는 서로 그룹으로 연결된 회원이 더 이상 연결을 원하지 않을 경우, 게시물에 대한 접근을 차단할 수 있는 연결 끊기 기능을 제공하고 있습니다. 연결 끊기를 했거나 앱에 접속 안 한 지 1년 이상 된 경우에 해당하는 경우 연결끊기 처리되며, 연결 끊기 기능 사용으로 인해 연결이 끊어진 계정은 재연결 없이 30일이 경과한 경우, 해당 계정은 휴면 계정으로 처리되며 공유한 모든 게시물을 영구 삭제할 수 있습니다.</li></ol><h3 id="f1823c4a-a2b3-475d-955e-1583c23a5a30" class="">제18조 유료 콘텐츠의 구매, 사용기간 및 이용</h3><ol type="1" id="60d56d49-d135-43dd-8f51-2e4a22901d79" class="numbered-list" start="1"><li>서비스 내에서 “회원”이 구매한 유료 “콘텐츠”는 해당 애플리케이션을 다운로드 받거나 설치한 단말기에서만 이용할 수 있습니다.</li></ol><ol type="1" id="b3f6e2ce-f4e7-4f7e-b00f-9f77aeb1061c" class="numbered-list" start="2"><li>회원이 구매한 유료 콘텐츠의 이용기간은 구매 시 명시된 기간에 따릅니다. 다만, 제13조 4항에 따라 서비스 중단이 이루어지는 경우 기간의 정함이 없는 유료 콘텐츠의 이용기간은 서비스 중단 공지 시 공지된 서비스의 중단일자까지로 합니다.</li></ol><ol type="1" id="728f32f5-3142-4194-8312-da574814ee5c" class="numbered-list" start="3"><li>회사는 회원의 유료 콘텐츠에 대한 이용신청이 다음 각 호에 해당하는 경우에는 승낙하지 않거나 승낙을 유보할 수 있습니다. 이용신청의 승인을 유보하거나 승낙하지 아니하는 경우, 회사는 이를 이용 신청한 회원에게 알려야 하며, 다만 회사의 귀책사유 없이 회원에게 통지할 수 없는 경우는 예외로 합니다.<ol type="a" id="9b045462-d5ef-4a66-b993-60c890662b92" class="numbered-list" start="1"><li>실명이 아니거나 타인의 명의를 이용한 경우</li></ol><ol type="a" id="79460b13-4751-446e-a9ec-fa37eae84759" class="numbered-list" start="2"><li>허위의 정보를 기재하거나, 회사가 제시하는 내용을 기재하지 않은 경우</li></ol><ol type="a" id="8b4c6862-ffa3-4051-b0e1-c7a0a507ce91" class="numbered-list" start="3"><li>미성년자가 청소년보호법 등 관련법에 의해서 이용이 금지되는 유료 콘텐츠를 이용하고자 하는 경우</li></ol><ol type="a" id="c65176ea-e387-458d-9c07-d973665063ca" class="numbered-list" start="4"><li>서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우</li></ol><ol type="a" id="b88b1298-71bb-4fc1-bbcf-6a1ad1a16aea" class="numbered-list" start="5"><li>이용 요금을 납부하지 않거나 납부자를 확인할 수 없는 경우</li></ol><ol type="a" id="ece3e8ce-2ec2-47b8-8f8b-52c65c2a832d" class="numbered-list" start="6"><li>만 19세 미만의 미성년자가 법정대리인의 동의 없이 신청한 경우</li></ol><ol type="a" id="2f4de4b5-d9b3-472f-babf-92bc3e9913e2" class="numbered-list" start="7"><li>명의자의 동의나 승낙 없이 결제 수단을 무단 도용하여 이용요금을 결제한 경우</li></ol><ol type="a" id="d2a93a54-89db-47a5-8078-be216ffc0047" class="numbered-list" start="8"><li>그 밖에 회원의 귀책사유로 승인이 불가능하다고 판단되는 경우</li></ol></li></ol><h3 id="9110a60f-c2a7-4f2b-8063-1002dfe1e5a0" class="">제19조 회원에 대한 서비스 이용제한</h3><ol type="1" id="34a1325c-b4dd-4ae9-bda2-23deb7f64469" class="numbered-list" start="1"><li>“회원”은 제10조에 따른 “회원”의 의무를 위반하는 행위를 하여서는 안 되며, 해당 행위를 하는 경우에 “회사”는 다음 각 호의 구분에 따른 “회원”의 “서비스” 이용제한, 관련 정보(글, 사진, 영상 등) 삭제 및 기타의 조치를 포함한 이용제한 조치를 할 수 있습니다. 이용제한 조치가 이루어지는 구체적인 사유 및 절차는 운영정책에서 정할 수 있습니다.<ol type="a" id="d9a2baff-a5e3-4d82-b6d7-21e53e251be3" class="numbered-list" start="1"><li>단말 이용 제한 : 일정기간 또는 영구히 해당 단말의 서비스 접속을 제한</li></ol><ol type="a" id="f20c9ea8-eaa8-493d-b435-010d8c19323d" class="numbered-list" start="2"><li>계정 이용 제한 : 일정기간 또는 영구히 계정의 서비스 이용을 제한</li></ol></li></ol><ol type="1" id="c29f518a-e042-430e-965b-6a68acbfb5cc" class="numbered-list" start="2"><li>제1항의 이용제한이 정당한 경우에 회사는 이용제한으로 인하여 회원이 입은 손해를 배상하지 않습니다.</li></ol><ol type="1" id="986683b2-a35b-4bce-bf98-60ff41610bec" class="numbered-list" start="3"><li>회사는 다음 각 호의 사유에 대한 조사가 완료될 때까지 해당 계정의 서비스 이용을 정지할 수 있습니다.<ol type="a" id="81d9b118-043e-46da-94d1-73ebc46b055d" class="numbered-list" start="1"><li>계정이 해킹 또는 도용 당했다는 정당한 신고가 접수된 경우</li></ol><ol type="a" id="70716e08-2b82-4276-8e81-ecc2fe302cad" class="numbered-list" start="2"><li>불법프로그램 사용자 또는 작업장 등 위법행위자로 의심되는 경우</li></ol><ol type="a" id="0f349db0-07a7-4cbb-82bd-2d29400a85d2" class="numbered-list" start="3"><li>그 밖에 각 호에 준하는 사유로 서비스 이용 정지의 잠정조치가 필요한 경우</li></ol></li></ol><ol type="1" id="5de9d5a0-2c3b-4812-9311-cfd2eb782a65" class="numbered-list" start="4"><li>회사가 용인하지 않는 방법을 통해 재화 및 아이템 등의 정보를 획득한 경우 회사는 운영정책에 따라 서비스 이용제한, 재화 및 아이템 회수 등의 필요 조치를 취할 수 있습니다.</li></ol><h3 id="cc0713f0-b74b-4a6e-a609-d1d0282c4c8f" class="">제20조 이용제한의 사유와 절차</h3><ol type="1" id="71acaccc-3575-46d1-9ac5-59d192f4957d" class="numbered-list" start="1"><li>“회사”는 제19조 1항에 따른 이용제한 조치의 구체적인 사유 및 절차를 제10조 1항에 따른 금지행위의 내용․정도․횟수․결과 등을 고려하여 운영정책으로 정합니다.</li></ol><ol type="1" id="e56ecd51-707a-41ce-8040-a16f77761ec3" class="numbered-list" start="2"><li>회사가 제19조에서 정한 이용제한을 하는 경우에는 회원에게 서비스 초기 화면에서 게시하는 방법으로 다음 각 호의 사항을 회원에게 통보합니다.<ol type="a" id="772c62b5-e6ea-43cd-bac0-d1df51fe2b44" class="numbered-list" start="1"><li>이용제한 사유</li></ol><ol type="a" id="43c38c22-8c6b-475b-a3d5-add69caa8fd3" class="numbered-list" start="2"><li>이용제한 유형 및 기간</li></ol></li></ol><h3 id="3f5a81ce-f5e1-4484-a0ad-d1d19a35e2ac" class="">제21조 이용제한 조치에 대한 이의신청 절차</h3><ol type="1" id="0090c4b1-4b2d-411c-9b83-61f7fe707d20" class="numbered-list" start="1"><li>“회원”이 “회사”의 이용제한 조치에 불복하고자 할 때에는 이 조치의 통지를 받은 날부터 14일 이내에 불복 이유를 기재한 이의 신청서를 서면, 전자우편 또는 이에 준하는 방법으로 회사에 제출하여야 합니다.</li></ol><ol type="1" id="cfd4e3aa-deac-4b6a-acb1-b9c1ce601d07" class="numbered-list" start="2"><li>회사는 제1항의 이의신청서를 접수한 날부터 15일 이내에 불복 이유에 대하여 서면, 전자우편 또는 이에 준하는 방법으로 답변합니다. 다만, 회사는 이 기간 내에 답변이 어려운 경우에는 그 사유와 처리일정을 통지합니다.</li></ol><ol type="1" id="f2d2bd64-5bf1-4a73-b3e5-7203b51c588f" class="numbered-list" start="3"><li>회사는 불복 이유가 타당한 경우에는 이에 따른 조치를 취합니다.</li></ol><h3 id="8e45e7c5-057d-4cde-bfbe-92e4402cca2d" class="">제22조 대금결제</h3><ol type="1" id="c22e4aa7-6991-489b-afbc-848bac02a662" class="numbered-list" start="1"><li>“콘텐츠”에 대한 구매 대금의 부과와 납부는 원칙적으로 이동통신사나 오픈마켓 사업자 등에서 정하는 정책이나 방법에 따릅니다. 또한 각 결제수단별 한도가 회사나 오픈마켓 사업자가 정하는 정책 또는 정부의 방침에 따라 부여되거나 조정될 수 있습니다.</li></ol><ol type="1" id="c5d0888a-4efc-4a08-b793-917f2dabb31a" class="numbered-list" start="2"><li>콘텐츠의 구매대금을 외화로 결제하는 경우에는 환율‧수수료 등으로 인하여 실제 청구금액이 서비스의 상점 등에서 표시된 가격과 달라질 수 있습니다.</li></ol><ol type="1" id="7a5ddbf4-fcf3-4f8f-8dc7-ec28e34d33c4" class="numbered-list" start="3"><li>회사는 결제의 이용을 위하여 반드시 필요한 회원의 개인정보를 추가적으로 요구할 수 있으며, 회원은 회사가 요구하는 개인정보를 정확하게 제공하여야 합니다. 회사는 회원이 허위로 또는 부정확하게 제공한 개인정보로 인하여 회원에게 발생하는 손해에 대하여 회사의 고의, 과실이 없는 한 회원의 손해를 배상할 책임을 부담하지 않습니다.</li></ol><ol type="1" id="e980d135-07d4-4505-8ca8-2ea31943c7e8" class="numbered-list" start="4"><li>만 19세 미만의 미성년자가 신용카드, 휴대폰 결제 등을 이용하여 대금을 지급할 때에는 법정대리인의 동의를 받아야 합니다.</li></ol><ol type="1" id="08abaa88-161c-4e2c-af54-c359a53881a9" class="numbered-list" start="5"><li>만 19세 미만의 미성년자인 회원이 그 법정대리인의 동의를 받지 않고 요금결제 등 의무부담행위를 한 경우, 미성년자인 회원 또는 그 미성년자의 법정대리인은 관련법령에 따라 해당 계약을 취소할 수 있습니다. 단, 미성년자의 사술로 인한 경우는 제외됩니다.</li></ol><ol type="1" id="5bb919fb-6fe4-4f99-814d-f757222d879c" class="numbered-list" start="6"><li>회사는 유료 콘텐츠 이용 도중 요금이 변경되더라도 이미 결제된 요금 대비 증감된 요금에 대하여 추가로 청구하거나 환불하지 않습니다.</li></ol><h3 id="02128a8d-96ff-4791-b69f-f761be4bc4a5" class="">제23조 청약의 철회 등</h3><ol type="1" id="a3049a8d-ef14-4ecb-a66c-039d9f6b2650" class="numbered-list" start="1"><li>“회사”가 제공하는 유료 “콘텐츠”는 「전자상거래 등에서의 소비자보호에 관한 법률」,「콘텐츠산업진흥법」 등 관련 법령에 따라 청약철회가 가능한 것과 제한되는 것으로 구분됩니다. 청약철회가 가능한 유료 “콘텐츠”의 경우 “회원”은 해당 유료 “콘텐츠”의 구매 후 7일 이내에 사용하지 아니한 유료 “콘텐츠”에 한하여 “회사”에 청약철회를 요청할 수 있습니다.</li></ol><ol type="1" id="667d9b5f-30e8-479c-a415-bedfab62af36" class="numbered-list" start="2"><li>회원은 23조 1항의 규정에 따라 다음 각 호의 어느 하나에 해당하는 경우에는 회사의 의사에 반하여 1항에 따른 청약철회 등을 할 수 없습니다.<ol type="a" id="11091be3-9863-4f35-aa12-0e69a7cd45c9" class="numbered-list" start="1"><li>회원에게 책임 있는 사유로 재화 등이 멸실되거나 훼손된 경우</li></ol><ol type="a" id="dbc7bd20-1da8-4841-8c9a-64f524221fa5" class="numbered-list" start="2"><li>회원이 재화를 사용 또는 일부 소비한 경우</li></ol><ol type="a" id="09ceb271-b18b-4b0d-b8a6-1960a6d54433" class="numbered-list" start="3"><li>구매 즉시 사용되거나 적용되는 유료 콘텐츠</li></ol><ol type="a" id="3fc7315d-3a1c-49d7-8a02-53636c015ad2" class="numbered-list" start="4"><li>추가혜택이 제공되는 경우에 그 추가 혜택이 사용된 콘텐츠</li></ol><ol type="a" id="25e6b580-12f1-4a52-b41a-c224d1ba6c9d" class="numbered-list" start="5"><li>개봉행위를 사용으로 볼 수 있거나 개봉 시 효용이 결정되는 콘텐츠의 개봉행위가 있는 경우</li></ol><ol type="a" id="a299d371-0a59-4744-86f5-caaf46ab564a" class="numbered-list" start="6"><li>그 밖에 거래의 안전을 위하여 법령으로 정하는 경우</li></ol></li></ol><ol type="1" id="d4d98fb4-ac56-4e12-9402-7eb57a1d7b64" class="numbered-list" start="3"><li>회사는 2항 각 호의 규정에 따라 청약철회가 불가능한 콘텐츠의 경우에는 그 사실을 회원이 쉽게 알 수 있는 곳에 명확하게 표시하고, 해당 콘텐츠의 시험사용 상품을 제공(한시적 이용의 허용, 체험용 제공 등)하거나 이에 대한 제공이 곤란한 경우에는 콘텐츠에 관한 정보를 제공함으로써 회원의 청약철회의 권리행사가 방해받지 아니하도록 조치합니다. 만약 회사가 이러한 조치를 하지 아니한 경우에는 2항 각 호의 청약철회 제한사유에도 불구하고 회원은 청약철회를 할 수 있습니다.</li></ol><ol type="1" id="b100bcb7-fbd1-46c5-830b-1507d866f613" class="numbered-list" start="4"><li>회원은 1항 내지 3항의 규정에도 불구하고 회사가 제공하는 유료 콘텐츠의 내용이 표시 또는 광고된 내용과 다르거나 계약 내용과 다르게 이행된 경우, 회원은 해당 유료 콘텐츠의 구매일로부터 3개월 이내에 청약철회가 가능합니다.</li></ol><ol type="1" id="e0d5e3b0-7285-4c5d-8ccb-f55e5dd9cd2d" class="numbered-list" start="5"><li>회원이 청약철회를 할 경우 회사는 플랫폼사업자 또는 오픈마켓 사업자를 통해 구매내역을 확인합니다. 또한 회사는 회원의 정당한 철회 사유를 확인하기 위해 회원에게서 제공받은 정보를 통해 회원에게 연락할 수 있으며, 추가적인 증빙을 요구할 수 있습니다.</li></ol><ol type="1" id="c4b60563-2f78-4915-bc80-d99b6d48a90c" class="numbered-list" start="6"><li>미성년자가 단말기에서 콘텐츠 구매계약을 체결하는 경우, 회사는 법정대리인의 동의가 없으면 미성년자 본인 또는 법정대리인이 그 계약을 취소할 수 있다는 내용을 고지하며, 미성년자가 법정대리인의 동의 없이 구매계약을 체결한 때에는 미성년자 본인 또는 법정대리인은 회사에 그 계약을 취소할 수 있습니다. 다만, 미성년자가 법정대리인이 범위를 정하여 처분을 허락한 재산으로 콘텐츠를 구매한 경우 또는 미성년자가 속임수로써 자기를 성년자로 믿게 하거나 법정대리인의 동의가 있는 것으로 믿게 한 경우에는 취소할 수 없습니다.</li></ol><ol type="1" id="df6bf553-5a75-45a8-b095-2abc1b53bed9" class="numbered-list" start="7"><li>유료 콘텐츠 구매자가 미성년자인지 여부는 결제가 진행된 단말기, 결제 실행자 정보, 결제 수단 명의자 등의 근거 기록을 토대로 판단됩니다. 이를 위하여 회사는 필요에 따라 미성년자 및 법정대리인을 증명할 수 있는 서류 제출을 요구할 수 있습니다.</li></ol><ol type="1" id="91c5d4a8-65d3-4e3e-9337-21d9665a2b6d" class="numbered-list" start="8"><li>회사가 회원에게 무료로 지급 경우에는 청약철회의 대상에서 제외됩니다.</li></ol><h3 id="3f6b3ca5-655b-4602-9e36-bbd301c38ad6" class="">제24조 청약철회 등의 효과</h3><ol type="1" id="f0ff4ed9-9f91-46b1-9877-41a099a39d31" class="numbered-list" start="1"><li>“회원”이 청약철회를 한 경우 “회사”는 지체 없이 “회원”의 유료 “콘텐츠”를 회수 또는 삭제하고, 환급에 필요한 서류 등을 접수한 날로부터 3영업일 이내에 “오픈마켓”사업자에 대한 결제취소요청 등 환급에 필요한 절차를 개시합니다. 이 경우 “회사”의 귀책사유로 환급이 지연될 경우 그 지연기간에 대하여 「전자상거래 등에서의 소비자보호에 관한 법률」 및 같은 법 시행령 제21조의3에서 정하는 이율(연 100분의 15)을 곱하여 산정한 지연이자를 지급합니다.</li></ol><ol type="1" id="f90dff5e-f086-4cd2-9384-1282ea955cad" class="numbered-list" start="2"><li>회사는 결제대금을 환급함에 있어 회원이 신용카드나 그 밖에 “전자상거래 등에서의 소비자보호에 관한 법률 시행령”으로 정하는 결제수단으로 대금을 지급한 때에는 지체 없이 당해 결제수단을 제공한 사업자로 하여금 결제대금의 청구를 정지 또는 취소하도록 요청합니다. 다만 회사가 결제업자로부터 이미 대금을 지급받은 때에는 이를 결제업자에게 환급하고 이를 소비자에게 통지합니다.</li></ol><ol type="1" id="5111a043-74b5-4d9e-a147-0425aa1ad175" class="numbered-list" start="3"><li>회사는 아이템 등이 일부 사용되거나 소비된 경우에는 회원이 얻은 이익 또는 해당 아이템 등의 공급에 든 비용에 상당하는 금액을 회원에게 청구할 수 있습니다.</li></ol><ol type="1" id="d592141e-2f54-4a62-acf0-13a1f41978df" class="numbered-list" start="4"><li>회사는 필요한 경우 회원에게 환급에 필요한 서류를 요구할 수 있으며, 회원이 이를 거부할 경우에는 환급이 제한될 수 있습니다.</li></ol><h3 id="7e1cd520-c408-42b2-8e69-a745c9d23dda" class="">제25조 과오납금의 환급</h3><ol type="1" id="786bb3f6-863e-49d0-bcb8-5ecaec956535" class="numbered-list" start="1"><li>“회사”는 과오납금이 발생하는 경우 과오납금을 “회원”에게 환급합니다. 다만, 과오납금이 “회사”의 고의 또는 과실 없이 “회원”의 과실로 인하여 발생한 경우에는 그 환급에 소요되는 실제 비용은 합리적인 범위 내에서 “회원”이 부담합니다.</li></ol><ol type="1" id="606f87f2-e316-4a27-b25b-f710ebc30d30" class="numbered-list" start="2"><li>애플리케이션을 통한 결제는 오픈마켓 사업자가 제공하는 결제방식에 따르며, 결제 과정에서 과오납금이 발생하는 경우, 회사 또는 오픈마켓 사업자에게 환급을 요청하여야 합니다.</li></ol><ol type="1" id="ea5b9506-91d6-4875-9be7-ee4837674d12" class="numbered-list" start="3"><li>애플리케이션의 다운로드 또는 네트워크 서비스의 이용으로 인해 발생한 통신요금(통화료, 데이터 통화료 등)은 환급 대상에서 제외될 수 있습니다.</li></ol><ol type="1" id="7aeb876f-27f2-4933-9b9e-651b60e801ce" class="numbered-list" start="4"><li>환급은 서비스를 이용하고 있는 단말기의 운영체제 종류에 따라 각 오픈마켓 사업자 또는 회사의 환급정책에 따라 진행됩니다.</li></ol><ol type="1" id="f4f6d5ed-92a5-406c-b0ab-9f5be7149908" class="numbered-list" start="5"><li>회사는 과오납금의 환급을 처리하기 위해 회원에게서 제공받은 정보를 통해 회원에게 연락할 수 있으며, 필요한 정보의 제공을 요청할 수 있습니다. 회사는 회원으로부터 환급에 필요한 정보를 받은 날부터 3영업일 이내에 환급합니다.</li></ol><ol type="1" id="30de9af3-2a4f-4dc3-a63e-2d4576adc206" class="numbered-list" start="6"><li>회사는 회원이 주장하는 과오금에 대해 환불을 거부할 경우에 정당하게 이용대금이 부과되었음을 입증할 책임을 집니다.</li></ol><h3 id="9703be51-8c3b-4a60-b456-1bc4032f6e5a" class="">제26조 회원의 해제 및 해지</h3><ol type="1" id="682f9fe4-4d10-422b-b6d4-ffa8ed192431" class="numbered-list" start="1"><li>“회원”은 언제든지 서비스 이용을 원하지 않는 경우 회원탈퇴 절차를 통하여 회원탈퇴를 할 수 있습니다. 회원탈퇴로 인해 “회원”이 “서비스” 내에서 보유한 이용정보는 모두 삭제되어 복구가 불가능하게 됩니다.</li></ol><ol type="1" id="f6bc79a5-46c2-46d1-b2ea-ceeeea5567a8" class="numbered-list" start="2"><li>회사는 회원이 이 약관 및 그에 따른 운영정책, 서비스 정책에서 금지하는 행위를 하는 등 본 계약을 유지할 수 없는 중대한 사유가 있는 경우에는 기간을 정하여 서비스 이용을 중지하거나 이용계약을 해지할 수 있습니다.</li></ol><ol type="1" id="8a4fdf88-dabb-4eaa-b7cc-fcf71e532943" class="numbered-list" start="3"><li>회원이 회원탈퇴를 신청한 경우 회사는 회원 본인 여부를 확인할 수 있으며, 해당 회원이 본인으로 확인되는 경우 회원의 신청에 따른 조치를 취합니다.</li></ol><ol type="1" id="326e4f2c-5cf6-49ab-95eb-30d2c6cf5e52" class="numbered-list" start="4"><li>회사는 최근의 서비스 이용일부터 연속하여 1년 동안 회사의 서비스를 이용하지 않은 휴면계정의 개인정보를 보호하기 위해 이용계약을 해지하고 회원의 개인정보 파기 등의 조치를 취할 수 있습니다. 이 경우 조치일 30일 전까지 계약해지, 개인정보 파기 등의 조치가 취해진다는 사실 및 파기될 개인정보 등을 회원에게 통지합니다.</li></ol><h3 id="a004d1fc-a94f-4ad0-b809-57a5864edc36" class="">제27조 손해배상</h3><ol type="1" id="8fb79347-5d2e-4186-a384-00295365c8c0" class="numbered-list" start="1"><li>“회사” 또는 “회원”은 본 약관을 위반하여 상대방에게 손해를 입힌 경우에는 그 손해를 배상할 책임이 있습니다. 다만, 고의 또는 과실이 없는 경우에는 그러하지 아니 합니다</li></ol><ol type="1" id="746b543a-3dc7-4c00-bab2-8d3ef96269d3" class="numbered-list" start="2"><li>회사가 개별서비스 제공자와 제휴 계약을 맺고 회원에게 개별서비스를 제공하는 경우에 회원이 이 개별서비스 이용약관에 동의를 한 뒤 개별서비스 제공자의 고의 또는 과실로 인해 회원에게 손해가 발생한 경우에 그 손해에 대해서는 개별서비스 제공자가 책임을 집니다.</li></ol><h3 id="9f8a5a76-8e80-431b-adb9-1d1d731bb710" class="">제28조 회사의 면책</h3><ol type="1" id="e24b6aca-c2ee-40d2-a5b5-752b8d5c7ff6" class="numbered-list" start="1"><li>“회사”는 천재지변 또는 이에 준하는 불가항력으로 인하여 “서비스”를 제공할 수 없는 경우에는 “서비스” 제공에 관하여 책임을 지지 않습니다.</li></ol><ol type="1" id="24653b9d-67ba-41c2-953d-c4287c766218" class="numbered-list" start="2"><li>회사는 서비스용 설비의 보수, 교체, 정기점검, 공사 등 기타 이에 준하는 사유로 발생한 손해에 대하여 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="e6354056-9660-4875-a28e-635cccc8615c" class="numbered-list" start="3"><li>회사는 회원의 고의 또는 과실로 인한 서비스 이용의 장애에 대하여는 책임을 지지 않습니다. 다만, 회원에게 부득이하거나 정당한 사유가 있는 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="4a3594a2-f466-41f7-8fd5-4cac244bba1c" class="numbered-list" start="4"><li>회원이 서비스와 관련하여 게재한 정보나 자료 등의 신뢰성, 정확성 등에 대하여 회사는 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</li></ol><ol type="1" id="1ab6261e-c230-458d-99a0-7de023f0be9a" class="numbered-list" start="5"><li>회사는 회원이 다른 회원 또는 타인과 서비스를 매개로 발생한 거래나 분쟁에 대해 개입할 의무가 없으며, 이로 인한 손해에 대해 책임을 지지 않습니다.</li></ol><ol type="1" id="b7ea6594-d6dc-4828-b1e7-10f31b413cc9" class="numbered-list" start="6"><li>회사는 무료로 제공되는 서비스 이용과 관련하여 회원에게 발생한 손해에 대해서는 책임을 지지 않습니다. 그러나 회사의 고의 또는 중과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="dccda4a0-306f-475d-90cf-9a2d89afed65" class="numbered-list" start="7"><li>회사는 회원이 서비스를 이용하여 기대하는 유료상품에 관한 결과를 얻지 못하거나 상실한 것에 대하여 책임을 지지 않으며, 서비스에 대한 취사선택 또는 이용으로 발생하는 손해 등에 대해서 회사의 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</li></ol><ol type="1" id="83d55369-4cbe-4fd5-9923-4c2a96986c92" class="numbered-list" start="8"><li>회사는 회원의 등급, 아이템, 가상 재화 등의 손실에 대하여 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="63df626f-77c3-49a3-bbe2-25213bea90f8" class="numbered-list" start="9"><li>회사는 회원이 계정 비밀번호, 단말기 비밀번호, 오픈마켓 사업자가 제공하는 비밀번호 등을 관리하지 않아 발생하는 제3자 결제에 대해 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="6057a08e-cdc1-4fff-adcc-bd17831f2110" class="numbered-list" start="10"><li>회원이 단말기의 변경, 모바일 기기의 번호 변경, 운영체제(OS) 버전의 변경, 해외 로밍, 통신사 변경 등으로 인해 콘텐츠 전부나 일부의 기능을 이용할 수 없는 경우 회사는 이에 대해 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="21af4e55-130e-4809-beba-a316e114f7de" class="numbered-list" start="11"><li>회원이 회사가 제공하는 콘텐츠나 계정정보를 삭제한 경우 회사는 이에 대해 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><ol type="1" id="a3dbfa30-b4b7-4e47-b242-936bec80639c" class="numbered-list" start="12"><li>회사는 이용자가 서비스 이용으로 발생한 손해에 대해서는 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</li></ol><h3 id="f34949e6-fef7-4ada-aa40-8214e67910cc" class="">제29조 회원에 대한 통지</h3><ol type="1" id="895e542c-bf5b-4612-a497-23e9811687fd" class="numbered-list" start="1"><li>“회사”가 “회원”에게 통지를 하는 경우 “회원”이 지정한 전자우편주소, LMS/SMS, 알림 메시지(Push Notification) 등으로 할 수 있습니다.</li></ol><ol type="1" id="fb9d6d6d-be2d-470b-8d79-30c6e5f05018" class="numbered-list" start="2"><li>회사는 회원전체에게 통지를 하는 경우 7일이상 회사의 서비스 내 또는 그 연결화면 등에 공지함으로써 1항의 통지에 갈음할 수 있습니다.</li></ol><h3 id="3be8e520-6d24-4724-a9cc-a29640ad1a20" class="">제30조 재판권 및 준거법</h3><p id="3cf62dd5-4795-4533-8e17-b08bfec9fec8" class="">이 약관은 대한민국 법률에 따라 규율되고 해석됩니다. “회사”와 “회원” 간에 발생한 분쟁으로 소송이 제기되는 경우에는 법령에 정한 절차에 따른 법원을 관할 법원으로 합니다.</p><h3 id="aa4caab0-b372-49ec-ab93-dabff6a61b9c" class="">제31조 회원의 고충처리 및 분쟁해결</h3><ol type="1" id="c85ca74a-0bce-4642-97b4-33baf908a924" class="numbered-list" start="1"><li>“회사”는 “회원”의 편의를 고려하여 “회원”의 의견이나 불만을 제시하는 방법을 “회사”의 “서비스” 내 또는 그 연결화면에 안내합니다. “회사”는 이러한 “회원”의 의견이나 불만을 처리하기 위한 전담조직을 운영합니다.</li></ol><ol type="1" id="ee49b2f6-f5a3-4a7b-a262-d3cb3d6b379d" class="numbered-list" start="2"><li>회사는 회원으로부터 제기되는 의견이나 불만이 정당하다고 객관적으로 인정될 경우에는 합리적인 기간 내에 이를 신속하게 처리합니다. 다만, 처리에 장기간이 소요되는 경우에는 회원에게 장기간이 소요되는 사유와 처리일정을 서비스내 또는 그 연결화면에 공지하거나 제27조에 따라 통지합니다.</li></ol><ol type="1" id="4ed72185-77e5-4494-85e7-12a2f60ec64c" class="numbered-list" start="3"><li>회사와 회원 간에 분쟁이 발생하여 제3의 분쟁조정기관이 조정할 경우 회사는 이용제한 등 회원에게 조치한 사항을 성실히 증명하고, 조정기관의 조정에 따를 수 있습니다</li></ol><h3 id="f4e8258c-3b4f-49fb-b215-e7a5bcbd2f82" class="">부칙</h3><p id="5dd19105-13b2-478b-bce9-2fc9fa625fdd" class="">제1조 (시행일) 이 약관은 2021년 09월 17일부터 시행한다.</p></div></article></body></html>
