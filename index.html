@@ -37,11 +37,16 @@
         }
 
         .logo-img {
-            max-width: 90%;
+            max-width: 300px;
+            width: 70%;
         }
 
         .row {
-            margin: 4em 0px;
+            margin: 2em 0px;
+        }
+
+        .btn-store {
+            max-width: 300px
         }
     </style>
 </head>
@@ -52,16 +57,30 @@
             <div class="w-100">
                 <div class="row text-center">
                     <div class="col">
-                        <img src="./assets/logo.png" alt="logo" class="logo-img">
+                        <img src="./assets/duep-logo.png" alt="logo" class="logo-img">
                     </div>
                 </div>
 
 
-                <div class="row bg-black text-white p-5">
-                    <div class="col p-5 text-center">
-                        <h2 class="mb-4">우리는 온라인 쇼핑의 불편함을 개선합니다</h2>
-                        <button class="btn btn-light btn-large m"
-                            onclick="location.href='mailto:project1331@naver.com'">Contact us</button>
+                <div class="row  p-5 text-white" style="background-color: #1a7a4c;">
+                    <div class="col text-center">
+                        <!-- <h3 class="mb-4">우리는 온라인 쇼핑의 불편함을 개선합니다</h3> -->
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-left">'밥은?'은 나에게 소중한 사람들과의 새로운 소통을 위해서 개인 모바일을 통한 서로의 식사 경험을 공유하는 서비스입니다.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 col-12 p-0 m-0 text-right">
+                                <button class="btn m-0 p-0 btn-store"
+                                    onclick="location.href='https://apps.apple.com/kr/app/%EB%B0%A5%EC%9D%80/id1587639530'">
+                                    <img src="./assets/appstore.png" class="img-fluid"></button>
+                            </div>
+                            <div class="col-lg-6 col-12 p-0 m-0 text-left">
+                                <button class="btn m-0 p-0 btn-store"
+                                    onclick="location.href='https://play.google.com/store/apps/details?id=com.project1331.duep'"><img
+                                        src="./assets/playstore.png" class="img-fluid"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
